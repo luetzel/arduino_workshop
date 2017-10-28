@@ -21,6 +21,11 @@ Gerät über den USB-Anschluss verbinden können.
 
 * [Link zum Download der Treiber](https://wiki.wemos.cc/downloads)
 
+* [Offizieller Treiber des Herstellers](http://www.wch.cn/download/CH341SER_EXE.html)
+
+Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen verändern, damit Sie
+unsignierte Treiber installieren können.
+
 Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE, etc.) verwenden,
 wird kein Treiber benötigt, denn der Linux-Kernel unterstützt das Board bereits.
 
