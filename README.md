@@ -1,5 +1,5 @@
 ## Arduino-Workshop
-### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Januar 2018
+### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Jan/Feb2018
 
 Hier entsteht in Kürze ein Code-Repository für den o.g. Kurs an der TU-Berlin.
 
@@ -28,3 +28,8 @@ Damit Sie nicht mit Administratorrechten arbeiten müssen, fügen Sie Ihren Benu
 Gruppe `dialout` hinzu.
 
 `sudo usermod -a -G dialout username`
+
+### Beispiel-Code
+
+Ab Mitte/Ende Dezember 2017 können Sie hier den Beispiel-Code und weiteres Arbeitsmaterial für
+die praktischen Übungen herunterladen.
