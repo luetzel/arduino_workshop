@@ -7,7 +7,7 @@ Hier entsteht in Kürze ein Code-Repository für den o.g. Kurs an der TU-Berlin.
 
 Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für Ihr Betriebssystem herunter. 
 
-* [Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software)
+* [Link zum Download der Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software)
 
 Eine Installationsanleitung für Windows, MacOSX oder Linux finden sie unter diesem Link:
 
@@ -19,7 +19,7 @@ Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wo
 zusätzlich den CH340-Treiber, damit Sie die im Kurs verwendeten Arduino Nano V3 Platinen mit Ihrem
 Gerät über den USB-Anschluss verbinden können.
 
-https://wiki.wemos.cc/downloads
+* [Link zum Download der Treiber](https://wiki.wemos.cc/downloads)
 
 Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE, etc.) verwenden,
 wird kein Treiber benötigt, denn der Linux-Kernel unterstützt das Board bereits.
