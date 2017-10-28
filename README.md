@@ -1,6 +1,30 @@
-# Arduino-Workshop
-## Arbeitsmaterial, Beispiel-Code und CH340-Treiber für den Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre im Januar 2018
+## Arduino-Workshop
+### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Januar 2018
 
-Hier entsteht in Kürze ein Repository für den o.g. Kurs der TU-Berlin.
+Hier entsteht in Kürze ein Code-Repository für den o.g. Kurs an der TU-Berlin.
 
-28.10.2017
+### Installation der Arduino-Entwicklungsumgebung
+
+Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für Ihr Betriebssystem herunter. 
+
+* [Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software)
+
+Eine Installationsanleitung für Windows, MacOSX oder Linux finden sie unter diesem Link:
+
+* [Installationsanleitung](https://www.arduino.cc/en/Guide/HomePage)
+
+### Treiber
+
+Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wollen, benötigen Sie
+zusätzlich den CH340-Treiber, damit Sie die im Kurs verwendeten Arduino Nano V3 Platinen mit Ihrem
+Gerät über den USB-Anschluss verbinden können.
+
+https://wiki.wemos.cc/downloads
+
+Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE, etc.) verwenden,
+wird kein Treiber benötigt, denn der Linux-Kernel unterstützt das Board bereits.
+
+Damit Sie nicht mit Administratorrechten arbeiten müssen, fügen Sie Ihren Benutzernamen der
+Gruppe `dialout` hinzu.
+
+`sudo usermod -a -G dialout username`
