@@ -9,7 +9,7 @@ Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für 
 
 * [Link zum Download der Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software)
 
-Eine Installationsanleitung für Windows, MacOSX oder Linux finden sie unter diesem Link:
+Eine Installationsanleitung für Windows, MacOSX oder Linux finden Sie unter diesem Link:
 
 * [Installationsanleitung](https://www.arduino.cc/en/Guide/HomePage)
 
