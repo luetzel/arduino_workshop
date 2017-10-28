@@ -36,5 +36,10 @@ Gruppe `dialout` hinzu.
 
 ### Beispiel-Code
 
-Ab Mitte/Ende Dezember 2017 können Sie hier den Beispiel-Code und weiteres Arbeitsmaterial für
-die praktischen Übungen herunterladen.
+Ab Mitte/Ende Dezember 2017 können Sie hier den [Beispiel-Code](https://github.com/luetzel/arduino_workshop/archive/master.zip)
+ und weiteres Arbeitsmaterial für die praktischen Übungen herunterladen.
+
+Die Inhalte des Verzeichnis `sketches` bzw. `libraries` speichern Sie bitte in den zugehörigen Verzeichnissen,
+die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden. Unter Windows
+z.B. im Verzeichnis `My Documents/Arduino`.
+
