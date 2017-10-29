@@ -26,10 +26,12 @@ Gerät über den USB-Anschluss verbinden können.
 Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen verändern, damit Sie
 unsignierte Treiber installieren können.
 
+#### Hinweise für Linux-Nutzer
+
 Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE, etc.) verwenden,
 wird kein Treiber benötigt, denn der Linux-Kernel unterstützt das Board bereits.
 
-Damit Sie nicht mit Administratorrechten arbeiten müssen, fügen Sie Ihren Benutzernamen der
+Damit Sie unter Linux nicht mit Administratorrechten arbeiten müssen, fügen Sie Ihren Benutzernamen der
 Gruppe `dialout` hinzu.
 
 `sudo usermod -a -G dialout username`
@@ -43,3 +45,9 @@ Die Inhalte des Verzeichnis `sketches` bzw. `libraries` speichern Sie bitte in d
 die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden. Unter Windows
 z.B. im Verzeichnis `My Documents/Arduino`.
 
+### Fritzing.org
+
+Optional können Sie Fritzing auf Ihrem Gerät installieren, das es ermöglicht elektronische
+Schaltungen zu entwickeln oder zu dokumentieren.
+
+Das Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](http://fritzing.org/download/).
