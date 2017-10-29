@@ -45,6 +45,13 @@ Die Inhalte des Verzeichnis `sketches` bzw. `libraries` speichern Sie bitte in d
 die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden. Unter Windows
 z.B. im Verzeichnis `My Documents/Arduino`.
 
+### Datenblätter
+
+Im Verzeichnis `datasheets` finden Sie eine Sammlung von Datenblättern zu den im Starter-Kit enthaltenen
+Bauteilen. Bitte beachten Sie, dass das Starter-Kit zum Teil baugleiche Teile anderer Hersteller enthält.
+
+Bitte beachten Sie, dass das Barometer-Breakout eine Versorgungsspannung von 3V3 benötigt!
+
 ### Fritzing.org
 
 Optional können Sie Fritzing auf Ihrem Gerät installieren, das es ermöglicht elektronische
