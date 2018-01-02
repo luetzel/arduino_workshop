@@ -1,7 +1,13 @@
 ## Arduino-Workshop
-### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Jan/Feb2018
+### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Jan/ Feb2018
 
-Hier entsteht in Kürze ein Code-Repository für den o.g. Kurs an der TU-Berlin.
+Kursbeginn ist Freitag, der 05.01.2018 um 14:00 Uhr s.t. im Elektrolabor MAR U0.37 (bis 17:15 Uhr).
+
+*WICHTIG* Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die aktuelle
+Version der Arduino-Entwicklungsumgebung (Version 1.8.5).
+
+Für die Startersets wird am ersten Tag ein Pfand von 35,- € eingesammelt das sie bei Rückgabe
+des vollständigen und unbeschädigten Sets am Ende des Kurses zurück erhalten.
 
 ### Installation der Arduino-Entwicklungsumgebung
 
@@ -41,16 +47,34 @@ Gruppe `dialout` hinzu.
 Ab Mitte/Ende Dezember 2017 können Sie hier den [Beispiel-Code](https://github.com/luetzel/arduino_workshop/archive/master.zip)
  und weiteres Arbeitsmaterial für die praktischen Übungen herunterladen.
 
-Die Inhalte des Verzeichnis `sketches` bzw. `libraries` speichern Sie bitte in den zugehörigen Verzeichnissen,
-die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden. Unter Windows
-z.B. im Verzeichnis `My Documents/Arduino`.
+Das Verzeichnis wird im Verlauf des Kurses aktualisert.
+
+Wenn Sie das Tool 'git' auf Ihrem System installiert haben, können Sie den Beispiel-Code auch durch
+Eingabe des Befehls:
+
+```
+git clone https://github.com/luetzel/arduino_workshop.git
+```
+
+herunterladen uns später mit
+
+```
+git pull
+```
+
+aktualisieren.
+
+Die Inhalte des Verzeichnis `sketches` bzw. `libraries` kopieren Sie bitte in die zugehörigen Verzeichnisse,
+die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden.
+Unter Windows z.B. in das Verzeichnis `My Documents/Arduino`.
 
 ### Datenblätter
 
 Im Verzeichnis `datasheets` finden Sie eine Sammlung von Datenblättern zu den im Starter-Kit enthaltenen
 Bauteilen. Bitte beachten Sie, dass das Starter-Kit zum Teil baugleiche Teile anderer Hersteller enthält.
 
-Bitte beachten Sie, dass das Barometer-Breakout eine Versorgungsspannung von 3V3 benötigt!
+Bitte beachten Sie, dass das Barometer-Breakout eine Versorgungsspannung von 3V3 benötigt und nicht mit 5 Volt
+Versorgungsspannung betrieben werden darf.
 
 ### Fritzing.org
 
