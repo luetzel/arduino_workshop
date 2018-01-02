@@ -1,9 +1,9 @@
 ## Arduino-Workshop
 ### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Jan/ Feb2018
 
-Kursbeginn ist Freitag, der 05.01.2018 um 14:00 Uhr s.t. im Elektrolabor MAR U0.37 (bis 17:15 Uhr).
+Kursbeginn ist **Freitag, der 05.01.2018 um 14:00 Uhr s.t.** im Elektrolabor MAR U0.37 (bis 17:15 Uhr).
 
-*WICHTIG* Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die aktuelle
+**WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die aktuelle
 Version der Arduino-Entwicklungsumgebung (Version 1.8.5).
 
 Für die Startersets wird am ersten Tag ein Pfand von 35,- € eingesammelt das sie bei Rückgabe
