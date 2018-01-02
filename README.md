@@ -7,7 +7,8 @@ Kursbeginn ist **Freitag, der 05.01.2018 um 14:00 Uhr s.t.** im Elektrolabor MAR
 Version der Arduino-Entwicklungsumgebung (Version 1.8.5).
 
 Für die Startersets wird am ersten Tag ein Pfand von 35,- € eingesammelt das sie bei Rückgabe
-des vollständigen und unbeschädigten Sets am Ende des Kurses zurück erhalten.
+des vollständigen und unbeschädigten Sets am Ende des Kurses zurück erhalten. **Bitte bringen Sie den
+Betrag passend mit!**
 
 ### Installation der Arduino-Entwicklungsumgebung
 
