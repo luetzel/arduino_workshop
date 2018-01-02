@@ -50,7 +50,7 @@ Ab Mitte/Ende Dezember 2017 können Sie hier den [Beispiel-Code](https://github.
 
 Das Verzeichnis wird im Verlauf des Kurses aktualisert.
 
-Wenn Sie das Tool 'git' auf Ihrem System installiert haben, können Sie den Beispiel-Code auch durch
+Wenn Sie das Tool ['git'](https://git-scm.com/download) auf Ihrem System installiert haben, können Sie den Beispiel-Code auch durch
 Eingabe des Befehls:
 
 ```
