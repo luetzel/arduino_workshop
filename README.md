@@ -33,6 +33,13 @@ Gerät über den USB-Anschluss verbinden können.
 Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen verändern, damit Sie
 unsignierte Treiber installieren können.
 
+### Den richtigen COM-Port finden
+Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden mit dem der Arduino
+über USB verbunden ist. Dieses Video erklärt wie man den richtigen Port im Window-Geräte Manager
+finden kann:
+
+[Wie finde ich den richtigen COM-Port? (Video)](https://www.youtube.com/watch?v=hou4okcCX7E)
+
 #### Hinweise für Linux-Nutzer
 
 Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE, etc.) verwenden,
@@ -79,7 +86,28 @@ Versorgungsspannung betrieben werden darf.
 
 ### Fritzing.org
 
-Optional können Sie Fritzing auf Ihrem Gerät installieren, das es ermöglicht elektronische
-Schaltungen zu entwickeln oder zu dokumentieren.
+Optional können Sie Fritzing auf Ihrem Gerät installieren. Mit Fritzing kann man elektronische
+Schaltungen am Computer entwickeln bzw. dokumentieren. Die Bauteile können per drag'n drop auf
+dem Steckbrett plaziert werden.
 
 Das Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](http://fritzing.org/download/).
+
+### Arduino Code-Referenz Handbuch
+
+Das Arduino-Forum.de hat ein sehr ausführliches Code-Referenz Handbuch erstellt in dem sämtliche Funktionen
+der Arduino-IDE dokumentiert sind. Es ist verträndlich geschrieben und für Anfänger geeignet. Das
+Handbuch kann kostenlos als PDF heruntergeladen werden.
+
+[Arduino Code-Referenz]https://www.arduinoforum.de/referenz.php
+
+### Elektronik Kompendium
+
+Das Elektronik-Kompendium ist ein sehr gutes Nachschlagwerk, um die im Kurs behandelten Grundschaltungen
+noch einmal nachzubereiten:
+
+[Ohmsches Gesetz](http://www.elektronik-kompendium.de/sites/grd/0201113.htm)
+[Zweite Kirchhoffsche Regel](https://www.elektronik-kompendium.de/sites/grd/0608011.htm)
+[Vorwiderstand einer LED berechnen](https://www.elektronik-kompendium.de/sites/grd/1006011.htm)
+[Unbelasteter Spannungsteiler](https://www.elektronik-kompendium.de/sites/slt/0201111.htm)
+
+
