@@ -33,7 +33,7 @@ Gerät über den USB-Anschluss verbinden können.
 Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen verändern, damit Sie
 unsignierte Treiber installieren können.
 
-### Den richtigen COM-Port finden
+#### Den richtigen COM-Port finden
 Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden mit dem der Arduino
 über USB verbunden ist. Dieses Video erklärt wie man den richtigen Port im Window-Geräte Manager
 finden kann:
