@@ -3,8 +3,11 @@
 
 Kursbeginn ist **Freitag, der 05.01.2018 um 14:00 Uhr s.t.** im Elektrolabor MAR U0.37 (bis 17:15 Uhr).
 
-**WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die aktuelle
-Version der Arduino-Entwicklungsumgebung (Version 1.8.5).
+Der zweite geblockte Kurs findet voraussichtlich zwischen dem 19.02.2018 und 23.02.2018 jeweils von
+ 9:00 Uhr s.t. bis um ca. 15 Uhr statt (Aushang beachten!).
+
+**WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
+ aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.5).
 
 Für die Startersets wird am ersten Tag ein Pfand von 35,- € eingesammelt das sie bei Rückgabe
 des vollständigen und unbeschädigten Sets am Ende des Kurses zurück erhalten. **Bitte bringen Sie den
