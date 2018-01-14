@@ -12,16 +12,12 @@ void setup() {
 void loop() {
  readValue = analogRead(potPin);
  //writeValue = (255./1023.) * readValue;
- analogWrite(ledPin, writeValue);
+ //analogWrite(ledPin, writeValue);
+
  analogWrite( ledPin, map(readValue, 0, 1023, 255, 0) );
  Serial.print("You are reading a value of ");
  Serial.println(readValue);
- //if (readValue <= 500) {
- //   analogWrite( ledPin, 255);
- // }
- // else {
- // analogWrite ( ledPin, 0);
- // } 
- //Serial.print("You are writing a value of ");
- //Serial.println(writeValue);
+ Serial.print("You are writing a value of ");
+ Serial.println(writeValue);
+ delay(250);
 }
