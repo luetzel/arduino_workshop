@@ -95,13 +95,18 @@ dem Steckbrett plaziert werden.
 
 Das Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](http://fritzing.org/download/).
 
+Im Unterverzeichnis fritzing finden Sie die Schaltpläne, die Sie während der praktischen Übungen
+kennengelernt haben:
+
+![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/01_LED.jpg)
+
 ### Arduino Code-Referenz Handbuch
 
 Das Arduino-Forum.de hat ein sehr ausführliches Code-Referenz Handbuch erstellt in dem sämtliche Funktionen
 der Arduino-IDE dokumentiert sind. Es ist verträndlich geschrieben und für Anfänger geeignet. Das
 Handbuch kann kostenlos als PDF heruntergeladen werden.
 
-[Arduino Code-Referenz]https://www.arduinoforum.de/referenz.php
+[Arduino Code-Referenz](https://www.arduinoforum.de/referenz.php)
 
 ### Elektronik Kompendium
 
