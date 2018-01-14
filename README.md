@@ -113,9 +113,9 @@ Handbuch kann kostenlos als PDF heruntergeladen werden.
 Das Elektronik-Kompendium ist ein sehr gutes Nachschlagwerk, um die im Kurs behandelten Grundschaltungen
 noch einmal nachzubereiten:
 
-[Ohmsches Gesetz](http://www.elektronik-kompendium.de/sites/grd/0201113.htm)
-[Zweite Kirchhoffsche Regel](https://www.elektronik-kompendium.de/sites/grd/0608011.htm)
-[Vorwiderstand einer LED berechnen](https://www.elektronik-kompendium.de/sites/grd/1006011.htm)
-[Unbelasteter Spannungsteiler](https://www.elektronik-kompendium.de/sites/slt/0201111.htm)
+* [Ohmsches Gesetz](http://www.elektronik-kompendium.de/sites/grd/0201113.htm)
+* [Zweite Kirchhoffsche Regel](https://www.elektronik-kompendium.de/sites/grd/0608011.htm)
+* [Vorwiderstand einer LED berechnen](https://www.elektronik-kompendium.de/sites/grd/1006011.htm)
+* [Unbelasteter Spannungsteiler](https://www.elektronik-kompendium.de/sites/slt/0201111.htm)
 
 
