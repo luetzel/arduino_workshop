@@ -95,7 +95,7 @@ dem Steckbrett plaziert werden.
 
 Das Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](http://fritzing.org/download/).
 
-Im Unterverzeichnis fritzing finden Sie die Schaltpläne, die Sie während der praktischen Übungen
+Im Unterverzeichnis [fritzing](https://github.com/luetzel/arduino_workshop/blob/master/fritzing) finden Sie die Schaltpläne, die Sie während der praktischen Übungen
 kennengelernt haben:
 
 ![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/01_LED.jpg)
