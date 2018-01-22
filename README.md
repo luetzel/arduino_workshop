@@ -38,7 +38,7 @@ unsignierte Treiber installieren können.
 
 Auf einem Apple Gerät hat die Verwendung des seriellen Monitors zu einemSystem-Absturz geführt.
 Davon betroffen sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra".
-Abhilfe schafft möglicherweise ein modifizierter Treiber, der (hier heruntergeladen)[https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver] werden
+Abhilfe schafft möglicherweise ein modifizierter Treiber, der [hier heruntergeladen](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver) werden
 kann.
 
 #### Den richtigen COM-Port finden
