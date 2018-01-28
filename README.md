@@ -127,8 +127,8 @@ noch einmal nachzubereiten:
 
 Am 26.01 haben wir versucht den Ultraschall-Sensor HC-SR04 zu verwenden. Leider haben die Sensoren bei
 nicht allen Teilnehmer*Innen zuverlässig funktioniert. Die Ursache ist ein Fehler in der Firmware des
-Microcontrollers, der sich auf der Sensor-Platine befindet. Offenbar ist nicht die gesamte Charge
-des gelieferten Sensors davon betroffen.
+Microcontrollers, der sich auf der Sensor-Platine befindet. Offenbar sind nicht alle der gelieferten
+ Sensoren davon betroffen.
 
 Bitte beim Stecken der Schaltung auf die Orientierung des Sensors achten und VCC/GND nicht verwechseln!
 
@@ -136,7 +136,7 @@ Bitte beim Stecken der Schaltung auf die Orientierung des Sensors achten und VCC
 
 Der Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird.
  In anderen Worten, der Sensor wartet für eine unbegrenzte Zeit auf das eintreffende Echo. Abhilfe schafft
-die Programmierug eines "Timeout":
+die Programmierug eines "Timeouts":
 
 ```
 duration = pulseIn(echoPin, HIGH, 30000);
