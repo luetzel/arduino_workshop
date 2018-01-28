@@ -123,4 +123,30 @@ noch einmal nachzubereiten:
 * [Vorwiderstand einer LED berechnen](https://www.elektronik-kompendium.de/sites/grd/1006011.htm)
 * [Unbelasteter Spannungsteiler](https://www.elektronik-kompendium.de/sites/slt/0201111.htm)
 
+### Probleme mit den Ultraschallsensoren
 
+Am 26.01 haben wir versucht den Ultraschall-Sensor HC-SR04 zu verwenden. Leider haben die Sensoren bei
+nicht allen Teilnehmern zuverlässig funktioniert. Die Ursache ist ein Fehler in der Firmware des
+Microcontrollers, der sich auf der Sensor-Platine befindet. Offenbar ist nicht die gesamte Charge
+des gelieferten Sensors davon betroffen.
+
+Bitte beim Stecken der Schaltung auf die Orientierung des Sensors achten und VCC/GND nicht verwechseln!
+
+![HC-SR04](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/13_Ultraschall_Steckplatine.jpg)
+
+Der Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird.
+ In anderen Worten, der Sensor wartet für eine unbegrenzte Zeit auf das eintreffende Echo. Abhilfe schafft
+die Programmierug eines "Timeout":
+
+```
+duration = pulseIn(echoPin, HIGH, 30000);
+```
+
+und anschließendem "Reset" des Sensors. Auf den echoPin wird dafür ein LOW für 200 us geschrieben.
+Im folgenden Sketch wird außerdem die Ausgabe der Distanz in cm auf ein Intervall zwischen 5
+und 400 cm begrenzt.
+
+[Ping Sketch mit Workaround](https://github.com/luetzel/arduino_workshop/blob/master/ping_timeout/ping_timeout.ino)
+
+Durch diesen Workaround ist der Sensor voll funktionstüchtig. Vorsicht bei der Verwendung von Libraries/
+Bibliotheken, denn nicht alle unterstützen diesen Workaround.
