@@ -136,7 +136,7 @@ Bitte beim Stecken der Schaltung auf die Orientierung des Sensors achten und VCC
 
 Der Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird.
  In anderen Worten, der Sensor wartet für eine unbegrenzte Zeit auf das eintreffende Echo. Abhilfe schafft
-die Programmierug eines "Timeouts":
+die Programmierung eines "Timeouts":
 
 ```
 duration = pulseIn(echoPin, HIGH, 30000);
