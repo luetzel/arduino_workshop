@@ -126,7 +126,7 @@ noch einmal nachzubereiten:
 ### Probleme mit den Ultraschallsensoren
 
 Am 26.01 haben wir versucht den Ultraschall-Sensor HC-SR04 zu verwenden. Leider haben die Sensoren bei
-nicht allen Teilnehmern zuverlässig funktioniert. Die Ursache ist ein Fehler in der Firmware des
+nicht allen Teilnehmer*Innen zuverlässig funktioniert. Die Ursache ist ein Fehler in der Firmware des
 Microcontrollers, der sich auf der Sensor-Platine befindet. Offenbar ist nicht die gesamte Charge
 des gelieferten Sensors davon betroffen.
 
