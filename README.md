@@ -132,7 +132,7 @@ Microcontrollers, der sich auf der Sensor-Platine befindet. Offenbar sind nicht 
 
 Bitte beim Stecken der Schaltung auf die Orientierung des Sensors achten und VCC/GND nicht verwechseln!
 
-![HC-SR04](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/13_Ultraschall_Steckplatine.jpg)
+![HC-SR04](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/13_Ultraschall.jpg)
 
 Der Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird.
  In anderen Worten, der Sensor wartet für eine unbegrenzte Zeit auf das eintreffende Echo. Abhilfe schafft
