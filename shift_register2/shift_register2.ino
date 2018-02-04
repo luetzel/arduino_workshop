@@ -7,7 +7,8 @@ OE (Pin13) => GND
 MR (Pin10) => VCC
 */
 
-byte wert = 255;
+byte wert = 0; // Gemeisame Anode
+//byte wert = 255; // Gemeinsame Cathode
 
 void setup() {
   pinMode(taktPin, OUTPUT);

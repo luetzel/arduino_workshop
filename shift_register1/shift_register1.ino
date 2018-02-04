@@ -7,7 +7,8 @@ OE (Pin13) => GND
 MR (Pin10) => VCC
 */
 
-int datenArray[] = {1,1,1,1,1,1,1,1};
+int datenArray[] = {1,1,1,1,1,1,1,1}; // gemeinsame Cathode
+//int datenArray[] = {0,0,0,0,0,0,0,0}; // gemeinsame Anode
 
 void setup() {
   pinMode(taktPin, OUTPUT);
