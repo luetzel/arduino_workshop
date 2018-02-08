@@ -150,3 +150,36 @@ und 400 cm begrenzt.
 
 Durch diesen Workaround ist der Sensor voll funktionstüchtig. Vorsicht bei der Verwendung von Libraries/
 Bibliotheken, denn nicht alle unterstützen diesen Workaround.
+
+### Verwendung von Bibliotheken
+
+Für die meisten Bauteile gibt es Bibliotheken, die das Programmieren - gerade für Anfänger - erheblich vereinfachen.
+Bibliotheken lassen sich über das Menü der Arduino-IDE "Sketch > Bibiothek einbinden > Bibliothek verwalten"
+suchen und installieren. Bevor eine Bibliothek in einem Sketch verwendet werden kann muss eine sogenannte Header-Datei
+(Dateiendung *.h) eingebunden werden. Das erfolgt mit der #include ```<library.h>``` Anweisung. Mit jeder Library
+werden gewöhnlich Code-Beispiele mitgeliefert, welche die Verwendung der Bibliothek erklären. Für den Ultraschallsensor
+können wir z.B. die NewPing Library verwenden:
+```
+#include <NewPing.h>
+
+#define TRIGGER_PIN  7
+#define ECHO_PIN     8
+#define MAX_DISTANCE 400
+
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  delay(50);
+  Serial.print("Ping: ");
+  Serial.print(sonar.ping_cm());
+  Serial.println("cm");
+}
+```
+
+Wenn die NewPing Library verwendet wird genügt es die Anschluss-Pins und ein "Sensor-Objekt" (hier: "sonar" genannt) zu deklarieren.
+Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch sich der eigene Programmieraufwand erheblich reduziert und
+ zudem sehr "übersichtlicher" Code entsteht.
