@@ -183,3 +183,70 @@ void loop() {
 Wenn die NewPing Library verwendet wird genügt es die Anschluss-Pins und ein "Sensor-Objekt" (hier: "sonar" genannt) zu deklarieren.
 Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch sich der eigene Programmieraufwand erheblich reduziert und
  zudem sehr "übersichtlicher" Code entsteht.
+
+### 16x2 LCD mit PCF8574 Backplate / Barometer BMP280
+
+Zur Verwendung von Bauteilen mit I2C-Anschluss muss die korrekte Adresse im Arduino-Sketch konfiguriert werden. Wenn die Adresse nicht
+bekannt ist kann diese mit der I2C-detect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek vervalten
+> Bibliothek einbinden" der Arduino-IDE installiert werden. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im
+seriellen Monitor die Adressen sämtlicher angeschlossener I2C devices angezeigt:
+
+```
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- 27 -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- 76 --
+```
+
+Die 16x2 LC Displays mit PCF8574 Backplate haben entweder die Adresse 0x3F oder 0x27. Der BMP280 Sensor (Barometer) hört auf die
+Adresse 0x76.
+
+Manchmal kann es erforderlich sein die Adresse in den C-Header Dateien der Bibliotheken einzustellen. Dafür navigiert man in das
+Arduino-Library Verzeichnis (Unter Windows: Dokumente/Arduino/libraries) und öffnet die betroffene Header-Datei. Für den BMP280
+Sensor öffnet man die Datei Adafruit_BMP280.h und trägt in der Zeile
+
+```
+ #define BMP280_ADDRESS                (0x76)
+```
+
+0x76 statt der voreingestellten Adresse 0x77 ein.
+
+Beim Anschließen der I2C Bauteile ist auf die Polarität GND/VCC und Spannungsversorgung zu achten (5V bzw 3V3 für das Barometer)!
+Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano verbunden. Der SCL Pin mit dem Pin A5 des Arduino.
+
+## Prüfungsaufgabe
+
+Bauen Sie das Modell einer Einparkhilfe, so wie man sie in vielen modernen PKWs vorfindet.
+
+Die Prüfungsaufgabe besteht aus insgesamt 3 Teilen:
+
+1.) Beschreiben Sie in Textform (nicht mehr als 1 DIN A4 Seite) aus welchen Komponenten/ Bauteilen die Einparkhilfe
+besteht und welche Funktionen z.B. optische oder akustische Signale implementiert werden sollen. Bitte senden Sie mir
+die Beschreibung als PDF-Datei - andere Dateiformate werden **NICHT** angenommen.
+
+
+2.) Zeichenen Sie einen **funktionsfähigen** Schaltplan mit dem Programm Fritzing. Sie dürfen alle Bauteile verwenden,
+auch solche, die nicht im Starter-Kit enthalten waren!
+
+3.) Schreiben Sie einen Arduino-Sketch für die Steuerung der verwendeten Bauteile in 2.) Zur Lösung der Aufgabe
+dürfen Sie Libraries/ Bibliotheken aus dem Internet verwenden. Kommentieren Sie im Sketch wo Sie die Bibliothek
+heruntergeladen haben, z.B:
+
+```
+#include <ultrasonic.h> // http://github.com/username/arduino_ultrasonic.git
+```
+
+Bitte **überprüfen** Sie vor Abgabe ob sich Ihr Sketch in der Arduino-IDE kompilieren lässt (auf den kleinen Haken
+oben links klicken).
+
+### Abgabe der Prüfungsaufgabe
+
+Ihr PDF, den Schaltplan als JPG und den Arduino-Sketch (*.ino Datei) senden Sie per Email bis spätestens 3 Wochen
+nach Kursende, d.h. den **09. März 2018**
+
+Für die Benotung werden alle drei Aufgabenteile gleich gewichtet, d.h. gehen zu je 1/3 in die Gesamtnote ein.
