@@ -187,8 +187,8 @@ Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch sich de
 ### 16x2 LCD mit PCF8574 Backplate / Barometer BMP280
 
 Zur Verwendung von Bauteilen mit I2C-Anschluss muss die korrekte Adresse im Arduino-Sketch konfiguriert werden. Wenn die Adresse nicht
-bekannt ist kann diese mit der I2C-detect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek vervalten
-> Bibliothek einbinden" der Arduino-IDE installiert werden. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im
+bekannt ist kann diese mit der I2C-detect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek verwalten
+Bibliothek einbinden" der Arduino-IDE installiert werden. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im
 seriellen Monitor die Adressen sämtlicher angeschlossener I2C devices angezeigt:
 
 ```
