@@ -216,7 +216,7 @@ Sensor öffnet man die Datei Adafruit_BMP280.h und trägt in der Zeile
 
 0x76 statt der voreingestellten Adresse 0x77 ein.
 
-Beim Anschließen der I2C Bauteile ist auf die Polarität GND/VCC und Spannungsversorgung zu achten (5V bzw 3V3 für das Barometer)!
+Beim Anschließen der I2C Bauteile ist auf die Polarität GND/VCC und Spannungsversorgung zu achten (5V bzw **3V3 für das Barometer!**)
 Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano verbunden. Der SCL Pin mit dem Pin A5 des Arduino.
 
 ## Prüfungsaufgabe
