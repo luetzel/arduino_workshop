@@ -186,6 +186,8 @@ Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch sich de
 
 ### 16x2 LCD mit PCF8574 Backplate / Barometer BMP280
 
+![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/17_BMP280_16x2_LCD.jpg)
+
 Zur Verwendung von Bauteilen mit I2C-Anschluss muss die korrekte Adresse im Arduino-Sketch konfiguriert werden. Wenn die Adresse nicht
 bekannt ist kann diese mit der I2C-detect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek verwalten
 Bibliothek einbinden" der Arduino-IDE installiert werden. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im
@@ -203,21 +205,22 @@ seriellen Monitor die Adressen sämtlicher angeschlossener I2C devices angezeigt
 70: -- -- -- -- -- -- 76 --
 ```
 
-Die 16x2 LC Displays mit PCF8574 Backplate haben entweder die Adresse 0x3F oder 0x27. Der BMP280 Sensor (Barometer) hört auf die
+Die 16x2 LC Displays mit PCF8574-Backplate haben entweder die Adresse 0x3F oder 0x27. Der BMP280 Sensor (Barometer) hört auf die
 Adresse 0x76.
 
-Manchmal kann es erforderlich sein die Adresse in den C-Header Dateien der Bibliotheken einzustellen. Dafür navigiert man in das
-Arduino-Library Verzeichnis (Unter Windows: Dokumente/Arduino/libraries) und öffnet die betroffene Header-Datei. Für den BMP280
-Sensor öffnet man die Datei Adafruit_BMP280.h und trägt in der Zeile
+Manchmal kann es erforderlich sein die Adresse direkt in den C-Header Dateien der Bibliotheken einzustellen. Dafür navigiert man in das
+Arduino-Library Verzeichnis (z.B. unter Windows: Dokumente/Arduino/libraries) und öffnet die betroffene Header-Datei. Für den BMP280
+Sensor ist das die Datei ```Adafruit_BMP280.h```. Dort trägt man in der Zeile
 
 ```
- #define BMP280_ADDRESS                (0x76)
+ #define BMP280_ADDRESS (0x76)
 ```
 
-0x76 statt der voreingestellten Adresse 0x77 ein.
+0x76 statt der vorgegebenen Adresse 0x77 ein.
 
 Beim Anschließen der I2C Bauteile ist auf die Polarität GND/VCC und Spannungsversorgung zu achten (5V bzw **3V3 für das Barometer!**)
 Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano verbunden. Der SCL Pin mit dem Pin A5 des Arduino.
+In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden!
 
 ## Prüfungsaufgabe
 
