@@ -1,10 +1,10 @@
 ## Arduino-Workshop
-### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Jan/ Feb2018
+### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Februar '18
 
 Der zweite geblockte Kurs findet zwischen dem **19.02.2018** und **23.02.2018** jeweils von
- 9:00 Uhr s.t. bis ca. 15 Uhr statt.
+ **9:00 Uhr s.t.** bis ca. **15 Uhr** statt.
 
-Am Donnerstag, dem **22.02.2018** endet der Kurs bereits um 13:45 Uhr. Die verbleibenden 75 min
+Am Donnerstag, dem **22.02.2018** endet der Kurs bereits um **13:45 Uhr**. Die verbleibenden 75 min
  Unterrichtszeit werden nach Rückprache mit den Teilnehmer*Innen auf die anderen Tage verteilt. 
 
 **WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
