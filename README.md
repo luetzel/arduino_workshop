@@ -37,10 +37,12 @@ Gerät über den USB-Anschluss verbinden können.
 Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen verändern, damit Sie
 unsignierte Treiber installieren können.
 
-Auf einem Apple Gerät hat die Verwendung des seriellen Monitors zu einemSystem-Absturz geführt.
-Davon betroffen sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra".
-Abhilfe schafft möglicherweise ein modifizierter Treiber, der [hier heruntergeladen](https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver) werden
-kann.
+### Probleme mit Apple-Geräten
+
+Auf Apple Geräten kann es bei Verbindung mit dem Arduino zu System-Absturzen kommen (Kernel-Panic).
+Betroffen davon sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra".
+Abhilfe schafft evtl ein Treiber-Update, das [hier heruntergeladen](http://download.makeblock.com/mblock/CH34x_Install_V1.3.pkg)
+ werden kann.
 
 #### Den richtigen COM-Port finden
 Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden mit dem der Arduino
