@@ -101,12 +101,12 @@ Optional können Sie Fritzing auf Ihrem Gerät installieren. Mit Fritzing kann m
 Schaltungen am Computer entwickeln bzw. dokumentieren. Die Bauteile können per drag'n drop auf
 dem Steckbrett plaziert werden.
 
-Das Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](http://fritzing.org/download/).
+Das Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](http://Fritzing.org/download/).
 
-Im Unterverzeichnis [fritzing](https://github.com/luetzel/arduino_workshop/blob/master/fritzing) finden Sie die Schaltpläne, die Sie während der praktischen Übungen
+Im Unterverzeichnis [Fritzing](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing) finden Sie die Schaltpläne, die Sie während der praktischen Übungen
 kennengelernt haben:
 
-![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/01_LED.jpg)
+![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/01_LED.jpg)
 
 ### Arduino Code-Referenz Handbuch
 
@@ -135,7 +135,7 @@ Microcontrollers, der sich auf der Sensor-Platine befindet. Offenbar sind nicht 
 
 Bitte beim Stecken der Schaltung auf die Orientierung des Sensors achten und VCC/GND nicht verwechseln!
 
-![HC-SR04](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/13_Ultraschall.jpg)
+![HC-SR04](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/13_Ultraschall.jpg)
 
 Der Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird.
  In anderen Worten, der Sensor wartet für eine unbegrenzte Zeit auf das eintreffende Echo. Abhilfe schafft
@@ -189,7 +189,7 @@ Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch sich de
 
 ### 16x2 LCD mit PCF8574 Backplate / Barometer BMP280
 
-![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/fritzing/17_BMP280_16x2_LCD.jpg)
+![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/17_BMP280_16x2_LCD.jpg)
 
 Zur Verwendung von Bauteilen mit I2C-Anschluss muss die korrekte Adresse im Arduino-Sketch konfiguriert werden. Wenn die Adresse nicht
 bekannt ist kann diese mit der I2C-detect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek verwalten
