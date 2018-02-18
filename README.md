@@ -149,7 +149,7 @@ und anschließendem "Reset" des Sensors. Auf den echoPin wird dafür ein LOW fü
 Im folgenden Sketch wird außerdem die Ausgabe der Distanz in cm auf ein Intervall zwischen 5
 und 400 cm begrenzt.
 
-[Ping Sketch mit Workaround](https://github.com/luetzel/arduino_workshop/blob/master/ping_timeout/ping_timeout.ino)
+[Ping Sketch mit Workaround](https://github.com/luetzel/arduino_workshop/blob/master/ping_timeout/10_ping_timeout.ino)
 
 Durch diesen Workaround ist der Sensor voll funktionstüchtig. Vorsicht bei der Verwendung von Libraries/
 Bibliotheken, denn nicht alle unterstützen diesen Workaround.
