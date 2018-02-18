@@ -37,7 +37,7 @@ Gerät über den USB-Anschluss verbinden können.
 Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen verändern, damit Sie
 unsignierte Treiber installieren können.
 
-### Probleme mit Apple-Geräten
+#### Probleme mit Apple-Geräten
 
 Auf Apple Geräten kann es bei Verbindung mit dem Arduino zu System-Absturzen kommen (Kernel-Panic).
 Betroffen davon sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra".
