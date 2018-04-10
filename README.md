@@ -1,18 +1,18 @@
 ## Arduino-Workshop
-### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Februar '18
+### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Mai '18
 
-Der zweite geblockte Kurs findet zwischen dem **19.02.2018** und **23.02.2018** jeweils von
- **9:00 Uhr s.t.** bis ca. **15 Uhr** statt.
+Der Kurs findet voraussichtlich immer freitags ab dem **18.05.2018** bis einschließlich **06.07.2018**
+ jeweils von **08:00 Uhr s.t.** bis ca. **12 Uhr** statt. 
 
-Am Donnerstag, dem **22.02.2018** endet der Kurs bereits um **13:45 Uhr**. Die verbleibenden 75 min
- Unterrichtszeit werden nach Rückprache mit den Teilnehmer*Innen auf die anderen Tage verteilt. 
+Am Freitag, dem **25.05.2018** findet der Kurs aufgrund des Schüler/Lehrer-Tags der Maker-Faire
+nicht statt.
 
 **WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
  aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.5).
 
-Für die Startersets wird am ersten Tag ein Pfand von 35,- € eingesammelt das sie bei Rückgabe
-des vollständigen und unbeschädigten Sets abzüglich der Leihgebühr von 15 € am Ende des Kurses zurück
- erhalten. **Bitte bringen Sie den Betrag möglichst passend mit!**
+Für die Startersets wird am ersten Tag ein Pfand von 20,- € eingesammelt das sie bei Rückgabe
+des vollständigen und unbeschädigten Sets abzüglich einer Leihgebühr von 5 € am Ende des Kurses
+ zurück erhalten. **Bitte bringen Sie den Betrag möglichst passend mit!**
 
 ### Installation der Arduino-Entwicklungsumgebung
 
@@ -250,9 +250,7 @@ heruntergeladen haben, z.B:
 Bitte **überprüfen** Sie vor Abgabe ob sich Ihr Sketch in der Arduino-IDE kompilieren lässt (auf den kleinen Haken
 oben links klicken).
 
-### Abgabe der Prüfungsaufgabe
+### Abgabe der Prüfungsaufgabe (Kurs WS2017/18 + geblockter Kurs in der vorlesungsfreien Zeit)
 
-Ihr PDF, den Schaltplan als JPG und den Arduino-Sketch (*.ino Datei) senden Sie per Email bis spätestens 3 Wochen
-nach Kursende, d.h. den **09. März 2018**
-
-Für die Benotung werden alle drei Aufgabenteile gleich gewichtet, d.h. gehen zu je 1/3 in die Gesamtnote ein.
+Die Prüfungsleistungen aller Teilnehmer sind inzwischen eingegangen und die Ergebnisse wurden an Herrn Eisen weitergeleitet.
+Für die Benotung wurden alle drei Aufgabenteile zu gleichen Teilen gewichtet, d.h. sie gingen zu je 1/3 in die Gesamtnote ein.
