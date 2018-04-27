@@ -2,7 +2,7 @@
 ### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Mai '18
 
 Der Kurs findet voraussichtlich immer freitags ab dem **18.05.2018** bis einschließlich **06.07.2018**
- jeweils von **08:00 Uhr s.t.** bis ca. **12 Uhr** statt. 
+ jeweils von **08:00 Uhr s.t.** bis ca. **14 Uhr** statt. 
 
 Am Freitag, dem **25.05.2018** findet der Kurs aufgrund des Schüler/Lehrer-Tags der Maker-Faire
 nicht statt.
