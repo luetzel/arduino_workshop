@@ -4,7 +4,7 @@
 Der Kurs findet voraussichtlich immer freitags ab dem **26.10.2018** bis einschließlich **14.12.2018**
  jeweils von **08:00 Uhr s.t.** bis ca. **12 Uhr** statt. 
 
-Am Freitag, dem **16.11.2018** findet der Kurs nicht statt.
+Am Freitag, dem **16.11.2018** findet der Kurs **nicht** statt.
 
 **WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
  aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.6).
