@@ -1,5 +1,5 @@
 ## Arduino-Workshop
-### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Mai '18
+### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im WS18
 
 Der Kurs findet voraussichtlich immer freitags ab dem **26.10.2018** bis einschließlich **14.12.2018**
  jeweils von **08:00 Uhr s.t.** bis ca. **12 Uhr** statt. 
