@@ -1,17 +1,16 @@
 ## Arduino-Workshop
 ### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Mai '18
 
-Der Kurs findet voraussichtlich immer freitags ab dem **18.05.2018** bis einschließlich **06.07.2018**
+Der Kurs findet voraussichtlich immer freitags ab dem **26.10.2018** bis einschließlich **14.12.2018**
  jeweils von **08:00 Uhr s.t.** bis ca. **12 Uhr** statt. 
 
-Am Freitag, dem **25.05.2018** findet der Kurs aufgrund des Schüler/Lehrer-Tags der Maker-Faire
-nicht statt.
+Am Freitag, dem **16.11.2018** findet der Kurs nicht statt.
 
 **WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
- aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.5).
+ aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.6).
 
 Für die Startersets wird am ersten Tag ein Pfand von 20,- € eingesammelt das sie bei Rückgabe
-des vollständigen und unbeschädigten Sets abzüglich einer Leihgebühr von 5 € am Ende des Kurses
+des vollständigen und unbeschädigten Sets abzüglich einer kleinen Leihgebühr von 5 € am Ende des Kurses
  zurück erhalten. **Bitte bringen Sie den Betrag möglichst passend mit!**
 
 ### Installation der Arduino-Entwicklungsumgebung
@@ -39,15 +38,14 @@ unsignierte Treiber installieren können.
 
 #### Probleme mit Apple-Geräten
 
-Auf Apple Geräten kann es bei Verbindung mit dem Arduino zu System-Absturzen kommen (Kernel-Panic).
+Auf Apple-Geräten kann es bei Verbindung mit dem Arduino zu System-Abstürzen kommen (Kernel-Panic).
 Betroffen davon sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra".
-Abhilfe schafft evtl ein Treiber-Update, das [hier heruntergeladen](http://download.makeblock.com/mblock/CH34x_Install_V1.3.pkg)
+Abhilfe schafft evtl. ein Treiber-Update, das [hier heruntergeladen](http://download.makeblock.com/mblock/CH34x_Install_V1.3.pkg)
  werden kann.
 
 #### Den richtigen COM-Port finden
-Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden mit dem der Arduino
-über USB verbunden ist. Dieses Video erklärt wie man den richtigen Port im Window-Geräte Manager
-finden kann:
+Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden mit, dem der Arduino
+über USB verbunden ist. Dieses Video erklärt wie das mit dem Windows-Geräte Manager geht:
 
 [Wie finde ich den richtigen COM-Port? (Video)](https://www.youtube.com/watch?v=hou4okcCX7E)
 
@@ -85,15 +83,15 @@ aktualisieren.
 
 Die Inhalte des Verzeichnis `sketches` bzw. `libraries` kopieren Sie bitte in die zugehörigen Verzeichnisse,
 die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden.
-Unter Windows z.B. in das Verzeichnis `My Documents/Arduino`.
+Unter Windows ist das in der Regel Verzeichnis `Meine Dokumente/Arduino`.
 
 ### Datenblätter
 
 Im Verzeichnis `Datasheets` finden Sie eine Sammlung von Datenblättern zu den im Starter-Kit enthaltenen
 Bauteilen. Bitte beachten Sie, dass das Starter-Kit zum Teil baugleiche Teile anderer Hersteller enthält.
 
-Bitte beachten Sie, dass das Barometer-Breakout eine Versorgungsspannung von 3V3 benötigt und nicht mit 5 Volt
-Versorgungsspannung betrieben werden darf.
+Bitte beachten Sie, dass das Barometer-Breakout eine Versorgungsspannung von *3V3* benötigt und deshalb
+*nicht* mit 5 Volt Versorgungsspannung betrieben werden darf.
 
 ### Fritzing.org
 
@@ -103,8 +101,8 @@ dem Steckbrett plaziert werden.
 
 Das Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](http://Fritzing.org/download/).
 
-Im Unterverzeichnis [Fritzing](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing) finden Sie die Schaltpläne, die Sie während der praktischen Übungen
-kennengelernt haben:
+Im Unterverzeichnis [Fritzing](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing) finden Sie die
+ Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben:
 
 ![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/01_LED.jpg)
 
@@ -128,16 +126,11 @@ noch einmal nachzubereiten:
 
 ### Probleme mit den Ultraschallsensoren
 
-Am 26.01 haben wir versucht den Ultraschall-Sensor HC-SR04 zu verwenden. Leider haben die Sensoren bei
-nicht allen Teilnehmer*Innen zuverlässig funktioniert. Die Ursache ist ein Fehler in der Firmware des
-Microcontrollers, der sich auf der Sensor-Platine befindet. Offenbar sind nicht alle der gelieferten
- Sensoren davon betroffen.
-
 Bitte beim Stecken der Schaltung auf die Orientierung des Sensors achten und VCC/GND nicht verwechseln!
 
 ![HC-SR04](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/13_Ultraschall.jpg)
 
-Der Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird.
+Ein Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird.
  In anderen Worten, der Sensor wartet für eine unbegrenzte Zeit auf das eintreffende Echo. Abhilfe schafft
 die Programmierung eines "Timeouts":
 
@@ -145,21 +138,21 @@ die Programmierung eines "Timeouts":
 duration = pulseIn(echoPin, HIGH, 30000);
 ```
 
-und anschließendem "Reset" des Sensors. Auf den echoPin wird dafür ein LOW für 200 us geschrieben.
+und dem anschließendem "Reset" des Sensors. Auf den echoPin wird dafür ein LOW für 200 us geschrieben.
 Im folgenden Sketch wird außerdem die Ausgabe der Distanz in cm auf ein Intervall zwischen 5
 und 400 cm begrenzt.
 
 [Ping Sketch mit Workaround](https://github.com/luetzel/arduino_workshop/blob/master/10_ping_timeout/10_ping_timeout.ino)
 
-Durch diesen Workaround ist der Sensor voll funktionstüchtig. Vorsicht bei der Verwendung von Libraries/
-Bibliotheken, denn nicht alle unterstützen diesen Workaround.
+Durch diesen Workaround ist der Sensor voll funktionstüchtig. Vorsicht bei der Verwendung von einigen
+Bibliotheken! Nicht alle unterstützen diesen Workaround.
 
 ### Verwendung von Bibliotheken
 
 Für die meisten Bauteile gibt es Bibliotheken, die das Programmieren - gerade für Anfänger - erheblich vereinfachen.
 Bibliotheken lassen sich über das Menü der Arduino-IDE "Sketch > Bibiothek einbinden > Bibliothek verwalten"
 suchen und installieren. Bevor eine Bibliothek in einem Sketch verwendet werden kann muss eine sogenannte Header-Datei
-(Dateiendung *.h) eingebunden werden. Das erfolgt mit der #include ```<library.h>``` Anweisung. Mit jeder Library
+(Dateiendung *.h) eingebunden werden. Das erfolgt mit der #include ```<library.h>``` Anweisung. Zu jeder Library
 werden gewöhnlich Code-Beispiele mitgeliefert, welche die Verwendung der Bibliothek erklären. Für den Ultraschallsensor
 können wir z.B. die NewPing Library verwenden:
 ```
@@ -183,9 +176,9 @@ void loop() {
 }
 ```
 
-Wenn die NewPing Library verwendet wird genügt es die Anschluss-Pins und ein "Sensor-Objekt" (hier: "sonar" genannt) zu deklarieren.
-Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch sich der eigene Programmieraufwand erheblich reduziert und
- zudem sehr "übersichtlicher" Code entsteht.
+Wenn die NewPing Library verwendet wird, genügt es die Anschluss-Pins und ein "Sensor-Objekt" (hier: "sonar" genannt) zu deklarieren.
+Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch der eigene Programmieraufwand erheblich reduziert wird und
+ wesentlich "übersichtlicherer" Code entsteht.
 
 ### 16x2 LCD mit PCF8574 Backplate / Barometer BMP280
 
@@ -193,8 +186,8 @@ Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch sich de
 
 Zur Verwendung von Bauteilen mit I2C-Anschluss muss die korrekte Adresse im Arduino-Sketch konfiguriert werden. Wenn die Adresse nicht
 bekannt ist kann diese mit der I2C-detect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek verwalten
-Bibliothek einbinden" der Arduino-IDE installiert werden. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im
-seriellen Monitor die Adressen sämtlicher angeschlossener I2C devices angezeigt:
+Bibliothek einbinden" installiert werden. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im
+seriellen Monitor die Adressen sämtlicher angeschlossener I2C Bauteile angezeigt:
 
 ```
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
@@ -212,7 +205,7 @@ Die 16x2 LC Displays mit PCF8574-Backplate haben entweder die Adresse 0x3F oder 
 Adresse 0x76.
 
 Manchmal kann es erforderlich sein die Adresse direkt in den C-Header Dateien der Bibliotheken einzustellen. Dafür navigiert man in das
-Arduino-Library Verzeichnis (z.B. unter Windows: Dokumente/Arduino/libraries) und öffnet die betroffene Header-Datei. Für den BMP280
+Arduino-Library Verzeichnis (z.B. unter Windows: Meine Dokumente/Arduino/libraries) und öffnet die betroffene Header-Datei. Für den BMP280
 Sensor ist das die Datei ```Adafruit_BMP280.h```. Dort trägt man in der Zeile
 
 ```
@@ -227,30 +220,4 @@ In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden
 
 ## Prüfungsaufgabe
 
-Bauen Sie das Modell einer Einparkhilfe, so wie man sie in vielen modernen PKWs vorfindet.
-
-Die Prüfungsaufgabe besteht aus insgesamt 3 Teilen:
-
-1.) Beschreiben Sie in Textform (nicht mehr als 1 DIN A4 Seite) aus welchen Komponenten/ Bauteilen die Einparkhilfe
-besteht und welche Funktionen z.B. optische oder akustische Signale implementiert werden sollen. Bitte senden Sie mir
-die Beschreibung als PDF-Datei - andere Dateiformate werden **NICHT** angenommen.
-
-
-2.) Zeichenen Sie einen **funktionsfähigen** Schaltplan mit dem Programm Fritzing. Sie dürfen alle Bauteile verwenden,
-auch solche, die nicht im Starter-Kit enthalten waren!
-
-3.) Schreiben Sie einen Arduino-Sketch für die Steuerung der verwendeten Bauteile in 2.) Zur Lösung der Aufgabe
-dürfen Sie Libraries/ Bibliotheken aus dem Internet verwenden. Kommentieren Sie im Sketch wo Sie die Bibliothek
-heruntergeladen haben, z.B:
-
-```
-#include <ultrasonic.h> // http://github.com/username/arduino_ultrasonic.git
-```
-
-Bitte **überprüfen** Sie vor Abgabe ob sich Ihr Sketch in der Arduino-IDE kompilieren lässt (auf den kleinen Haken
-oben links klicken).
-
-### Abgabe der Prüfungsaufgabe (Kurs WS2017/18 + geblockter Kurs in der vorlesungsfreien Zeit)
-
-Die Prüfungsleistungen aller Teilnehmer sind inzwischen eingegangen und die Ergebnisse wurden an Herrn Eisen weitergeleitet.
-Für die Benotung wurden alle drei Aufgabenteile zu gleichen Teilen gewichtet, d.h. sie gingen zu je 1/3 in die Gesamtnote ein.
+*folgt*
