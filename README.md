@@ -7,7 +7,7 @@ Der Kurs findet voraussichtlich immer freitags ab dem **26.10.2018** bis einschl
 Am Freitag, dem **16.11.2018** findet der Kurs **nicht** statt.
 
 **WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
- aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.6).
+ aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.7).
 
 Für die Startersets wird am ersten Tag ein Pfand von 20,- € eingesammelt das sie bei Rückgabe
 des vollständigen und unbeschädigten Sets abzüglich einer kleinen Leihgebühr von 5 € am Ende des Kurses
