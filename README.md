@@ -233,7 +233,7 @@ Die Aufgabe besteht aus drei Teilen:
 	    z.B. Regenmenge oder Windrichtung/ Geschwindigkeit mit den vorhandenen Bauteilen
 	    bestimmen lassen.
 
-	2.) Zeichnen sie einen Schaltung mit dem Programm Fritzing.org. Verbinden sie alle
+	2.) Zeichnen sie eine Schaltung mit dem Programm Fritzing.org. Verbinden sie alle
 	    verwendeten Bauteile mit dem Arduino Nano. Benutzen sie die Steckbrett-Ansicht
 	    und exportieren sie ihre Schaltung als JPG-Bild.
 
