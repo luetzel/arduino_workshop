@@ -222,7 +222,7 @@ In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden
 ### Bau einer Arduino-Wetter Station
 Ein beliebtes Maker-Projekt für den Arduino ist der Bau einer Wetterstation. Im Netz werden sie sehr viele verschiedene Beispiele
 dafür finden. Die Herausforderung besteht jedoch darin, dass sie nur die Bauteile aus dem ihnen zur Verfügung stehenden Starterkit
-benutzen sollen.
+benutzen dürfen.
 
 Die Aufgabe besteht aus drei Teilen:
 
