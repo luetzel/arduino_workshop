@@ -242,8 +242,8 @@ Die Aufgabe besteht aus drei Teilen:
 	    Wenn sie fremde Code-Schnipsel oder Bibliotheken einsetzen, geben sie bitte
 	    die Quelle/ URL an, von der sie kopiert haben.
 
-Bitte geben senden sie ihre Arbeit bis spätestens zum 15. Januar 2019 als PDF-Datei ein. Den Quellcode senden sie bitte als
- TXT, bzw. im Arduino-Format ein.
+Bitte senden sie ihre Arbeit bis spätestens zum 15. Januar 2019 als PDF-Datei ein. Den Quellcode geben sie bitte als
+ TXT, bzw. im Arduino-Format ab.
 
 Für die Errechnung der Note werden die Teilaufgaben 1.) bis 3.) zu gleichen Teilen gewichtet. Zum Bestehen der Prüfung müssen
 mindestens 50% der Aufgaben korrekt gelöst werden.
