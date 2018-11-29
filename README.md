@@ -219,5 +219,33 @@ Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano
 In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden!
 
 ## Prüfungsaufgabe
+### Bau einer Arduino-Wetter Station
+Ein beliebtes Maker-Projekt für den Arduino ist der Bau einer Wetterstation. Im Netz werden sie sehr viele verschiedene Beispiele
+dafür finden. Die Herausforderung besteht jedoch darin, dass sie nur die Bauteile aus dem ihnen zur Verfügung stehenden Starterkit
+benutzen sollen.
 
-*folgt*
+Die Aufgabe besteht aus drei Teilen:
+
+	1.) Beschreiben sie die verschiedenen Funktionen ihrer Wetterstation in Worten.
+	    Welche Bauteile werden verwendet und welche Wetterdaten sollen damit aufgezeichnet
+	    werden. Für die Messung von Temperatur, Luftfeuchte und Luftdruck stehen ihnen
+	    verschiedene Sensoren zur Verfügung. Entwickeln sie kreative Lösungen, wie sich
+	    z.B. Regenmenge oder Windrichtung/ Geschwindigkeit mit den vorhandenen Bauteilen
+	    bestimmen lassen.
+
+	2.) Zeichnen sie einen Schaltung mit dem Programm Fritzing.org. Verbinden sie alle
+	    verwendeten Bauteile mit dem Arduino Nano. Benutzen sie die Steckbrett-Ansicht
+	    und exportieren sie ihre Schaltung als JPG-Bild.
+
+	3.) Schreiben sie einen funktionsfähigen Arduino-Sketch für die Steuerung ihrer
+	    Wetterstation.
+	    Wenn sie fremde Code-Schnipsel oder Bibliotheken einsetzen, geben sie bitte
+	    die Quelle/ URL an, von der sie kopiert haben.
+
+Bitte geben senden sie ihre Arbeit bis spätestens zum 15. Januar 2019 als PDF-Datei ein. Den Quellcode senden sie bitte als
+ TXT, bzw. im Arduino-Format ein.
+
+Für die Errechnung der Note werden die Teilaufgaben 1.) bis 3.) zu gleichen Teilen gewichtet. Zum Bestehen der Prüfung müssen
+mindestens 50% der Aufgaben korrekt gelöst werden.
+
+Viel Erfolg bei der Bearbeitung der Aufgaben!
