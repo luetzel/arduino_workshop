@@ -3,14 +3,14 @@
 
 Der Kurs findet immer freitags ab dem **26.04.2019** bis einschließlich **14.16.2019** an den folgenden Terminen
 
-26.04.19
-03.05.19
-10.05.19
-17.05.19 fällt aus!
-24.05.19
-31.05.19
-07.06.19
-14.06.19,
+	26.04.19
+	03.05.19
+	10.05.19
+	17.05.19 fällt aus!
+	24.05.19
+	31.05.19
+	07.06.19
+	14.06.19,
 
 jeweils von **08:00 Uhr c.t.** bis **12:15 Uhr** statt. 
 
