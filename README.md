@@ -1,17 +1,25 @@
 ## Arduino-Workshop
-### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im WS18
+### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Sommersemester 2019
 
-Der Kurs findet immer freitags ab dem **26.10.2018** bis einschließlich **14.12.2018**
- jeweils von **08:00 Uhr s.t.** bis ca. **12 Uhr** statt. 
+Der Kurs findet immer freitags ab dem **26.04.2019** bis einschließlich **14.16.2019** an den folgenden Terminen
 
-Am Freitag, dem **16.11.2018** findet der Kurs **nicht** statt.
+26.04.19
+03.05.19
+10.05.19
+17.05.19 fällt aus!
+24.05.19
+31.05.19
+07.06.19
+14.06.19,
+
+jeweils von **08:00 Uhr c.t.** bis **12:15 Uhr** statt. 
 
 **WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
- aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.7).
+ aktuelle Version der Arduino-Entwicklungsumgebung (Version 1.8.9).
 
-Für die Startersets wird am ersten Tag ein Pfand von 20,- € eingesammelt das sie bei Rückgabe
-des vollständigen und unbeschädigten Sets abzüglich einer kleinen Leihgebühr von 5 € am Ende des Kurses
- zurück erhalten. **Bitte bringen Sie den Betrag möglichst passend mit!**
+Für die Startersets wird am ersten Tag ein Pfand von 20,- € eingesammelt,
+ das sie bei Rückgabe des vollständigen und unbeschädigten Sets zurück erhalten.
+**Bitte bringen Sie den Betrag möglichst passend mit!**
 
 ### Installation der Arduino-Entwicklungsumgebung
 
@@ -25,22 +33,22 @@ Eine Installationsanleitung für Windows, MacOSX oder Linux finden Sie unter die
 
 ### Treiber
 
-Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wollen, benötigen Sie
-zusätzlich den CH340-Treiber, damit Sie die im Kurs verwendeten Arduino Nano V3 Platinen mit Ihrem
-Gerät über den USB-Anschluss verbinden können.
+Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wollen, müssen Sie
+zusätzlich den CH340-Treiber installieren, damit Sie die im Kurs verwendeten Arduino Nano V3
+ Platinen mit Ihrem Gerät über den USB-Anschluss verbinden können.
 
 * [Link zum Download der Treiber](https://wiki.wemos.cc/downloads)
 
 * [Offizieller Treiber des Herstellers](http://www.wch.cn/download/CH341SER_EXE.html)
 
 Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen verändern, damit Sie
-unsignierte Treiber installieren können.
+unsignierte Treiber installieren dürfen.
 
 #### Probleme mit Apple-Geräten
 
-Auf Apple-Geräten kann es bei Verbindung mit dem Arduino zu System-Abstürzen kommen (Kernel-Panic).
+Auf Apple-Geräten kann es bei Verwendung des falschen Treibers zu System-Abstürzen kommen (Kernel-Panic).
 Betroffen davon sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra".
-Abhilfe schafft evtl. ein Treiber-Update, das [hier heruntergeladen](http://download.makeblock.com/mblock/CH34x_Install_V1.3.pkg)
+Abhilfe schafft Treiber, der [hier heruntergeladen](http://download.makeblock.com/mblock/CH34x_Install_V1.3.pkg)
  werden kann.
 
 #### Den richtigen COM-Port finden
@@ -52,19 +60,19 @@ Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden 
 #### Hinweise für Linux-Nutzer
 
 Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE, etc.) verwenden,
-wird kein Treiber benötigt, denn der Linux-Kernel unterstützt das Board bereits.
+ist kein Treiber erforderlich, denn der Linux-Kernel unterstützt CH340-Devices bereits.
 
-Damit Sie unter Linux nicht mit Administratorrechten arbeiten müssen, fügen Sie Ihren Benutzernamen der
-Gruppe `dialout` hinzu.
+Damit Sie unter Linux nicht mit Administratorrechten arbeiten müssen, fügen Sie ihren Benutzernamen der
+Gruppe `dialout` hinzu. Das geht mit:
 
 `sudo usermod -a -G dialout username`
 
 ### Beispiel-Code
 
-Ab Mitte/Ende Dezember 2017 können Sie hier den [Beispiel-Code](https://github.com/luetzel/arduino_workshop/archive/master.zip)
+Ab 1. April 2019 können Sie hier den [Beispiel-Code](https://github.com/luetzel/arduino_workshop/archive/master.zip)
  und weiteres Arbeitsmaterial für die praktischen Übungen herunterladen.
 
-Das Verzeichnis wird im Verlauf des Kurses aktualisert.
+Das Verzeichnis wird im Verlauf des Kurses gelegentlich aktualisert.
 
 Wenn Sie das Tool ['git'](https://git-scm.com/download) auf Ihrem System installiert haben, können Sie den Beispiel-Code auch durch
 Eingabe des Befehls:
@@ -84,6 +92,12 @@ aktualisieren.
 Die Inhalte des Verzeichnis `sketches` bzw. `libraries` kopieren Sie bitte in die zugehörigen Verzeichnisse,
 die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden.
 Unter Windows ist das in der Regel Verzeichnis `Meine Dokumente/Arduino`.
+
+### Unterstützung anderer Mikrocontroller
+Inzwischen kann man mit der Arduino-IDE auch andere Mikrocontroller programmieren. Die Installation der dafür erforderlichen Dateien kann über den Boars-Manager der Arduino-IDE erfolgen.
+Die URLs zu den Paketquellen können in den Einstellungen der Arduino-IDE hinterlegt werden. Eine Anleitung dafür findet man auf dieser Seite:
+
+https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
 
 ### Datenblätter
 
@@ -219,33 +233,4 @@ Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano
 In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden!
 
 ## Prüfungsaufgabe
-### Bau einer Arduino-Wetter Station
-Ein beliebtes Maker-Projekt für den Arduino ist der Bau einer Wetterstation. Im Netz werden sie sehr viele verschiedene Beispiele
-dafür finden. Die Herausforderung besteht jedoch darin, dass sie nur die Bauteile aus dem ihnen zur Verfügung stehenden Starterkit
-benutzen dürfen.
-
-Die Aufgabe besteht aus drei Teilen:
-
-	1.) Beschreiben sie die verschiedenen Funktionen ihrer Wetterstation in Worten.
-	    Welche Bauteile werden verwendet und welche Wetterdaten sollen damit aufgezeichnet
-	    werden. Für die Messung von Temperatur, Luftfeuchte und Luftdruck stehen ihnen
-	    verschiedene Sensoren zur Verfügung. Entwickeln sie kreative Lösungen, wie sich
-	    z.B. Regenmenge oder Windrichtung/ Geschwindigkeit mit den vorhandenen Bauteilen
-	    bestimmen lassen.
-
-	2.) Zeichnen sie eine Schaltung mit dem Programm Fritzing.org. Verbinden sie alle
-	    verwendeten Bauteile mit dem Arduino Nano. Benutzen sie die Steckbrett-Ansicht
-	    und exportieren sie ihre Schaltung als JPG-Bild.
-
-	3.) Schreiben sie einen funktionsfähigen Arduino-Sketch für die Steuerung ihrer
-	    Wetterstation.
-	    Wenn sie fremde Code-Schnipsel oder Bibliotheken einsetzen, geben sie bitte
-	    die Quelle/ URL an, von der sie kopiert haben.
-
-Bitte senden sie ihre Arbeit bis spätestens zum 15. Januar 2019 als PDF-Datei ein. Den Quellcode geben sie bitte als
- TXT, bzw. im Arduino-Format ab.
-
-Für die Errechnung der Note werden die Teilaufgaben 1.) bis 3.) zu gleichen Teilen gewichtet. Zum Bestehen der Prüfung müssen
-mindestens 50% der Aufgaben korrekt gelöst werden.
-
-Viel Erfolg bei der Bearbeitung der Aufgaben!
+Wird zu einem späteren Zeitpunkt bekannt gegeben.
