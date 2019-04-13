@@ -4,6 +4,7 @@
 #define BTTN 5
 
 void setup(){
+  Serial.begin(9600);
   pinMode(RED, OUTPUT);
   pinMode(YELLOW, OUTPUT);
   pinMode(GREEN, OUTPUT);
@@ -11,17 +12,26 @@ void setup(){
 }
 
 void loop() {
-  if (digitalRead(BTTN) == HIGH)
+  if (digitalRead(BTTN) == HIGH) {
     digitalWrite(RED, HIGH);
-  else
+    digitalWrite(YELLOW, LOW);
+    digitalWrite(GREEN, LOW);
+  }  
+  else {
+    delay(1000);
+    digitalWrite(RED, HIGH);
     digitalWrite(YELLOW, HIGH);
-    delay(500);
+    delay(3000);
     digitalWrite(RED, LOW);
     digitalWrite(YELLOW, LOW);
     digitalWrite(GREEN, HIGH);
-    delay(2000);
+    delay(6000);
     digitalWrite(YELLOW, HIGH);
-    delay(1000);
+    digitalWrite(GREEN, LOW);
+    delay(3000);
     digitalWrite(RED, HIGH);
     digitalWrite(YELLOW, LOW);
+    digitalWrite(GREEN, LOW);
+    delay(6000);
+  }
 }
