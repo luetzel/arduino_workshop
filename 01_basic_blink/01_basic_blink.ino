@@ -1,3 +1,6 @@
+// #define is an instruction for the C preprocessor and works like an
+// alias. In the example below, LED_PIN is replaced by 13 before
+// the code is compiled
 #define LED_PIN 13
 #define BLINK_TIME 1000
 
