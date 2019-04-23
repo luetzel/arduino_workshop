@@ -1,10 +1,8 @@
-// #define is an instruction for the C preprocessor and works like an
-// alias. In the example below, LED_PIN is replaced by 13 before
-// the code is compiled
+// blink example without delay
 #define LED_PIN 13
 #define BLINK_TIME 1000
-int long time;
-int long time_old;
+unsigned long time;       // type to store millis is very important!
+unsigned long time_old;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
