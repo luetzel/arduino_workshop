@@ -205,15 +205,15 @@ Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano
 In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden!
 
 ## Prüfungsleistung (aktualisiert am 15.05.2019)
-Die Prüfungsleistung besteht aud drei Teilen, die jeweils zu 1/3 gewichtet werden.
+Die Prüfungsleistung besteht aus drei Teilen, die jeweils zu 1/3 gewichtet werden.
 Der Abgabetermin ist am **Sonntag, den 14.07.2019**, d.h. ca. 4 Wochen nach Ende des
 Kurses. Später eingereichte Hausarbeiten werden nicht mehr angenommen.
 
 ### Aufgabenstellung
 Konstruieren Sie das Modell einer elektronischen Einparkhilfe, wie man sie in modernen
-PKW vorfindet. Verwenden Sie ausschließlich Teile, die sich im Starterkit befinden.
+PKW vorfindet. Verwenden Sie ausschließlich Bauteile, die sich im Starterkit befinden.
 Als Hilfsmittel dürfen Sie Code-Beispiele und Bibliotheken aus dem Internet benutzen,
-jedoch müssen Sie diese Code-Teile in Ihrem Quellcode markieren (z.B. durch Kommentare
+jedoch müssen Sie diese Code-Teile in Ihrem Quellcode kenntlich machen (z.B. durch Kommentare
 und/oder Angabe der URL).
 
 ### Teil 1
@@ -242,4 +242,5 @@ Die E-Mail Adresse für die Einsendung der Prüfungsleistung wird während des K
 bekannt gegeben.
 
 Viel Erfolg!
+
 ML
