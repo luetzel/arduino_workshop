@@ -204,5 +204,43 @@ Beim Anschließen der I2C Bauteile ist auf die Polarität GND/VCC und Spannungsv
 Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano verbunden. Der SCL Pin mit dem Pin A5 des Arduino.
 In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden!
 
-## Prüfungsaufgabe
-Wird zu einem späteren Zeitpunkt bekannt gegeben.
+## Prüfungsleistung (aktualisiert am 15.05.2019)
+Die Prüfungsleistung besteht aus drei Teilen, die jeweils zu 1/3 gewichtet werden.
+Der Abgabetermin ist am **Sonntag, den 14.07.2019**, d.h. ca. 4 Wochen nach Ende des
+Kurses. Später eingereichte Hausarbeiten werden nicht mehr angenommen.
+
+### Aufgabenstellung
+Konstruieren Sie das Modell einer elektronischen Einparkhilfe, wie man sie in modernen
+PKW vorfindet. Verwenden Sie ausschließlich Bauteile, die sich im Starterkit befinden.
+Als Hilfsmittel dürfen Sie Code-Beispiele und Bibliotheken aus dem Internet benutzen,
+jedoch müssen Sie diese Code-Teile in Ihrem Quellcode kenntlich machen (z.B. durch Kommentare
+und/oder Angabe der URL).
+
+### Teil 1
+Beschreiben Sie die verschiedenen Funktionen der von Ihnen konstruierten Einparkhilfe.
+Begründen Sie die Auswahl ihrer Bauteile. Mit welchen Bauteilen, die nicht im Starterkit
+enthalten sind, könnte man den Funktionsumfang erweitern? (Umfang max. 3 DIN A4 Seiten).
+
+### Teil 2
+Zeichnen Sie mit dem Programm Fritzing.org eine Schaltskizze (Steckbrett-Ansicht).
+Vermeiden Sie Überkreuzungen von Steckbrücken. Schüler*innen sollten in der Lage sein
+die Schaltung zu verstehen und nachzubauen. Kommentieren Sie ggf. einzelne Schritte
+und erstellen Sie ein Arbeitsblatt. Dieses und den Teil 1 reichen Sie bitte als eine
+PDF-Datei ein.
+
+### Teil 3
+Programmieren Sie mit der Arduino-IDE einen Sketch für die Steuerung ihrer Schaltung.
+Achten Sie darauf, dass die verwendeten Arduino-Pins mit Ihrer Schaltskizze übereinstimmen.
+ermeiden Sie Syntax-Fehler, der Code sollte sich fehlerfrei kompilieren lassen.
+Gegen Ende des Kurses werden Sie während des Workshops Zeit haben an ihrer Schaltung zu
+arbeiten. Den Quellcode reichen Sie bitte als *.ino (Textdatei) ein.
+
+Die Dateien aus Teil 1, 2 & 3 speichern Sie bitte als ZIP-Archiv und benennen dieses
+mit ArduinoSoSE19_<Name>_<Vorname>.ZIP, damit ich die Dateien den Teilnehmenden
+zuordnen kann.
+Die E-Mail Adresse für die Einsendung der Prüfungsleistung wird während des Kurses
+bekannt gegeben.
+
+Viel Erfolg!
+
+ML
