@@ -1,9 +1,8 @@
 #include "PCF8574.h"
-#include <Wire.h>
 
 // A0, A1, A2 connected to GND
 // +5V ------ +LED ------- 330Rresistor ------ P8574pin
-// Sink Current, sonst leuchten die LEDs nicht besonders hell.
+// sink current
 
 PCF8574 expander(0x20);
 
