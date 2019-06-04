@@ -1,5 +1,5 @@
 /* Der pcf8574 Port Expander kann auch mit der Wire-Library
-   festeuert werden. Auf die Prots P0 - P7 muss lediglich
+   angesteuert werden. Auf die Ports P0 - P7 muss lediglich
    ein Byte geschrieben werden, das die Ausgänge auf HIGH bzw.
    LOW setzt. Der Status der Ports lässt sich durch lesen
    eines Bytes aus dem Port-Expander ermitteln.   
@@ -24,7 +24,7 @@ void setup() {
   Wire.beginTransmission(DEVICE_ADDRESS);
   Wire.requestFrom(DEVICE_ADDRESS,1);
   byte val = Wire.read();
-  Wire.endTransmission();
+  //Wire.endTransmission();
   Serial.print("Status :");
   Serial.println(val, BIN);
 }
