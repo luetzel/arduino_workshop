@@ -24,7 +24,7 @@ void setup() {
   Wire.beginTransmission(DEVICE_ADDRESS);
   Wire.requestFrom(DEVICE_ADDRESS,1);
   byte val = Wire.read();
-  //Wire.endTransmission();
+  //Wire.endTransmission(); not required, see https://github.com/Koepel/How-to-use-the-Arduino-Wire-library/wiki/Common-mistakes
   Serial.print("Status :");
   Serial.println(val, BIN);
 }
