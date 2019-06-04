@@ -1,3 +1,11 @@
+/*
+Eine ausführliche Beschreibung des Codes (Tutorial) finden Sie unter der
+URL://https://www.sparkfun.com/tutorials/253. Anstelle dieses Sensors liegt
+dem Starterkit ein BMP280 Sensor bei, der ebenfalls Temperatur und Luftdruck
+messen kann. Bei verwendung von Bibliotheken müssen Sie darauf achten die
+korrekte i2c Adresse einzustellen. Falls die Adresse unbekannt ist, "scannen"
+sie den Bus mit dem i2cdetect Sketch.
+*/
 #include<Wire.h>
 #define DEVICE_ADDRESS 0x77  // I2C address of BMP180
 #define OSS 0  // Oversampling Setting
