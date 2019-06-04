@@ -51,7 +51,7 @@ uint8_t i2cRead(uint8_t address)
   Wire.write(address);
   Wire.endTransmission();
   Wire.requestFrom(DEVICE_ADDRESS, 1);
-  while(!Wire.available());
+  //while(!Wire.available());
   return Wire.read();
 }
 
@@ -62,7 +62,7 @@ int i2cReadInt(uint8_t address)
   Wire.write(address);
   Wire.endTransmission();
   Wire.requestFrom(DEVICE_ADDRESS, 2);
-  while(Wire.available()<2);
+  //while(Wire.available()<2);
   msb = Wire.read();
   lsb = Wire.read();
   return (int)msb << 8 | lsb;
@@ -108,7 +108,7 @@ unsigned long i2cReadUP()
   Wire.requestFrom(DEVICE_ADDRESS, 3);
   
   // Wait for data to become available
-  while(Wire.available() < 3);
+  //while(Wire.available() < 3);
   msb = Wire.read();
   lsb = Wire.read();
   xlsb = Wire.read();
