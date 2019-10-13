@@ -1,24 +1,24 @@
 ## Arduino-Workshop
-### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Sommersemester 2019
+### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Wintersemester 2019
 
-Der Kurs findet immer freitags ab dem **26.04.2019** bis einschließlich **14.06.2019** an den folgenden Terminen
+Der Kurs findet immer freitags ab dem **25.10.2019** bis einschließlich **13.12.2019** an den folgenden Terminen
 
-	26.04.19
-	03.05.19
-	10.05.19
-	17.05.19 fällt aus!
-	24.05.19
-	31.05.19
-	07.06.19
-	14.06.19,
+	25.10.19,
+	01.11.19,
+	08.11.19 (fällt aus),
+	15.11.19,
+	22.11.19,
+	29.11.19,
+	06.12.19,
+	13.12.19
 
 jeweils von **08:00 Uhr c.t.** bis **12:15 Uhr** statt.
 
 **WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
- aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.9).
+ aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.10).
 
 Für die Startersets wird am ersten Tag ein Pfand von 20,- € eingesammelt,
- das sie bei Rückgabe des vollständigen und unbeschädigten Sets zurück erhalten.
+ das Sie bei Rückgabe des vollständigen und unbeschädigten Sets zurück erhalten.
 **Bitte bringen Sie den Betrag möglichst passend mit!**
 
 ### Installation der Arduino-Entwicklungsumgebung
@@ -56,7 +56,7 @@ Gruppe `dialout` hinzu. Das geht mit:
 Damit erlangen Sie als normaler Benutzer Schreibrechte für /dev/ttyUSB0
 
 ### Beispiel-Code
-Ab 1. April 2019 können Sie hier den [Beispiel-Code](https://github.com/luetzel/arduino_workshop/archive/master.zip)
+Ab 15. Oktober 2019 können Sie hier alle [Beispiel-Codes](https://github.com/luetzel/arduino_workshop/archive/master.zip)
  und weiteres Arbeitsmaterial für die praktischen Übungen herunterladen.
 Das Verzeichnis wird im Verlauf des Kurses gelegentlich aktualisert.
 Wenn Sie das Tool ['git'](https://git-scm.com/download) auf Ihrem System installiert haben, können Sie den Beispiel-Code auch durch Eingabe des Befehls:
@@ -76,7 +76,7 @@ aktualisieren.
 Die Inhalte des Verzeichnis `sketches` bzw. `libraries` kopieren Sie bitte in die zugehörigen Unter-Verzeichnisse,
 die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden.
 Unter Windows ist das in der Regel das Verzeichnis `Meine Dokumente/Arduino`.
-In das Verzeichnis libraries kopieren sie zusätzliche Bibliotheken, die die Verwendung von verschiedener Hardwar-Module
+In das Verzeichnis libraries kopieren Sie zusätzliche Bibliotheken, die die Verwendung von verschiedener Hardware-Module
 erleichtern.
 
 ### Unterstützung anderer Mikrocontroller
@@ -88,8 +88,8 @@ https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-supp
 ### Datenblätter
 Im Verzeichnis `Datasheets` finden Sie eine Sammlung von Datenblättern zu den im Starter-Kit enthaltenen
 Bauteilen. Bitte beachten Sie, dass das Starter-Kit zum Teil baugleiche Teile anderer Hersteller enthält.
-Bitte beachten Sie, dass das Barometer-Breakout eine Versorgungsspannung von *3V3* benötigt und deshalb
-*nicht* mit 5 Volt Versorgungsspannung betrieben werden darf.
+Das Barometer-Breakout (BMP208) benötigt eine Versorgungsspannung *3,3 Volt* und darf deshalb
+*nicht* mit 5 Volt Versorgungsspannung betrieben werden!
 
 ### Fritzing.org
 Optional können Sie Fritzing auf Ihrem Gerät installieren. Mit Fritzing kann man elektronische
@@ -204,43 +204,5 @@ Beim Anschließen der I2C Bauteile ist auf die Polarität GND/VCC und Spannungsv
 Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano verbunden. Der SCL Pin mit dem Pin A5 des Arduino.
 In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden!
 
-## Prüfungsleistung (aktualisiert am 15.05.2019)
-Die Prüfungsleistung besteht aus drei Teilen, die jeweils zu 1/3 gewichtet werden.
-Der Abgabetermin ist am **Sonntag, den 14.07.2019**, d.h. ca. 4 Wochen nach Ende des
-Kurses. Später eingereichte Hausarbeiten werden nicht mehr angenommen.
-
-### Aufgabenstellung
-Konstruieren Sie das Modell einer elektronischen Einparkhilfe, wie man sie in modernen
-PKW vorfindet. Verwenden Sie ausschließlich Bauteile, die sich im Starterkit befinden.
-Als Hilfsmittel dürfen Sie Code-Beispiele und Bibliotheken aus dem Internet benutzen,
-jedoch müssen Sie diese Code-Teile in Ihrem Quellcode kenntlich machen (z.B. durch Kommentare
-und/oder Angabe der URL).
-
-### Teil 1
-Beschreiben Sie die verschiedenen Funktionen der von Ihnen konstruierten Einparkhilfe.
-Begründen Sie die Auswahl ihrer Bauteile. Mit welchen Bauteilen, die nicht im Starterkit
-enthalten sind, könnte man den Funktionsumfang erweitern? (Umfang max. 3 DIN A4 Seiten).
-
-### Teil 2
-Zeichnen Sie mit dem Programm Fritzing.org eine Schaltskizze (Steckbrett-Ansicht).
-Vermeiden Sie Überkreuzungen von Steckbrücken. Schüler*innen sollten in der Lage sein
-die Schaltung zu verstehen und nachzubauen. Kommentieren Sie ggf. einzelne Schritte
-und erstellen Sie ein Arbeitsblatt. Dieses und den Teil 1 reichen Sie bitte als eine
-PDF-Datei ein.
-
-### Teil 3
-Programmieren Sie mit der Arduino-IDE einen Sketch für die Steuerung ihrer Schaltung.
-Achten Sie darauf, dass die verwendeten Arduino-Pins mit Ihrer Schaltskizze übereinstimmen.
-ermeiden Sie Syntax-Fehler, der Code sollte sich fehlerfrei kompilieren lassen.
-Gegen Ende des Kurses werden Sie während des Workshops Zeit haben an ihrer Schaltung zu
-arbeiten. Den Quellcode reichen Sie bitte als *.ino (Textdatei) ein.
-
-Die Dateien aus Teil 1, 2 & 3 speichern Sie bitte als ZIP-Archiv und benennen dieses
-mit ArduinoSoSE19_<Name>_<Vorname>.ZIP, damit ich die Dateien den Teilnehmenden
-zuordnen kann.
-Die E-Mail Adresse für die Einsendung der Prüfungsleistung wird während des Kurses
-bekannt gegeben.
-
-Viel Erfolg!
-
-ML
+## Prüfungsaufgabe
+Wird zu einem späteren Zeitpunkt bekannt gegeben.
