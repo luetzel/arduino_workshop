@@ -1,5 +1,6 @@
 ## Arduino Grundkurs (L543, ALBA WP7)
-### Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin für das Sommersemster 2020
+### am Institut für Berufliche Bildung und Arbeitslehre
+### der TU-Berlin für das Sommersemster 2020
 
 Der Kurs findet in diesem Semester ausschließlich online statt! Den Einschreibeschlüssel und Link für die Teilnahme erhalten Sie per E-Mail.
 
@@ -22,8 +23,10 @@ Eine Installationsanleitung für Windows, MacOSX oder Linux finden Sie unter die
 ### Treiber
 Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wollen, müssen Sie
 zusätzlich einen Treiber für den CH340-USB-Controller-Chip installieren, damit Sie die im Kurs verwendeten Arduino Nano V3 Platinen mit Ihrem Gerät über den USB-Anschluss programmieren können.
+
 * [Link zum Download der Treiber](https://wiki.wemos.cc/downloads)
 * [Offizieller Treiber des Herstellers](http://www.wch.cn/download/CH341SER_EXE.html)
+
 Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen so verändern, dass Sie unsignierte Treiber installieren dürfen.
 
 #### Probleme mit Apple-Geräten
@@ -88,7 +91,7 @@ Das kostenlose Programm können Sie hier für [Windows, MacOS oder Linux herunte
 
 Im Unterverzeichnis [Fritzing](https://https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing) finden Sie alle Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben:
 
-![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing/01_LED.jpg)
+![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg)
 
 ### Arduino Code-Referenz Handbuch
 Das deutsche Arduino Forum hat ein sehr ausführliches Code-Referenz-Handbuch erstellt, in dem sämtliche Funktionen
@@ -120,7 +123,7 @@ und ein "Reset" des Sensors. Auf den echoPin wird dafür ein LOW für 200 us ges
 Im folgenden Sketch wird außerdem die Ausgabe der Distanz in cm auf ein Intervall zwischen 5
 und 400 cm begrenzt.
 
-[Ping Sketch mit Workaround](https://github.com/luetzel/arduino_workshop/blob/master/10_ping_timeout/10_ping_timeout.ino)
+[Ping Sketch mit Workaround](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/10_ping_timeout/10_ping_timeout.ino)
 
 Durch diesen Workaround ist der Sensor voll funktionstüchtig. Vorsicht bei der Verwendung von einigen
 Bibliotheken! Nicht alle unterstützen diesen Workaround.
@@ -159,7 +162,7 @@ Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch der eig
 
 ### 16x2 LCD mit PCF8574 Backplate / Barometer BMP280
 
-![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/17_BMP280_16x2_LCD.jpg)
+![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/Fritzing/17_BMP280_16x2_LCD.jpg)
 
 Zur Verwendung von Bauteilen mit I2C-Anschluss muss die korrekte Adresse im Arduino-Sketch konfiguriert werden. Wenn die Adresse nicht
 bekannt ist kann diese mit der I2C-detect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek verwalten
