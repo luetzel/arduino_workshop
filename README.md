@@ -42,7 +42,8 @@ Auf Apple-Geräten kann es bei Verwendung des falschen Treibers zu System-Abstü
 
 #### Den richtigen COM-Port finden
 Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden, mit dem der Arduino per USB verbunden ist. Dieses Video erklärt wie man den korrekten USB-Port mit dem Windows-Geräte-Manager findet:
-[Wie finde ich den richtigen COM-Port? (Video)](https://www.youtube.com/watch?v=hou4okcCX7E)
+
+* [Wie finde ich den richtigen COM-Port? (Video)](https://www.youtube.com/watch?v=hou4okcCX7E)
 
 #### Hinweise für Linux-Nutzer
 Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE o. ä.) verwenden,
@@ -85,7 +86,7 @@ Inzwischen kann man mit der Arduino-IDE auch andere Mikrocontroller programmiere
 
 Die URLs zu den Paketquellen können in den Einstellungen der Arduino-IDE hinterlegt werden. Eine Anleitung dafür findet man auf dieser Seite:
 
-https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
+* https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
 
 ### Datenblätter
 Im Verzeichnis `Datasheets` finden Sie eine Sammlung von Datenblättern zu den im Starter-Kit enthaltenen
