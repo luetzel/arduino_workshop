@@ -53,6 +53,7 @@ Beim Linux-Kernel ab der Version 5.5.x wurden Veränderungen am CH340-Modul vorg
 Damit Sie unter Linux auf den Seriellen Port schreiben können, müssen Sie ihren Benutzernamen der Gruppe `dialout` hinzufügen. Das geht mit:
 
 `sudo usermod -a -G dialout username`
+
 Damit erlangen Sie als normaler Benutzer Schreibrechte für /dev/ttyUSB0 Port.
 
 ### Beispiel-Codes
