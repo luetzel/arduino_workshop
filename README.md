@@ -1,14 +1,15 @@
 ## Arduino Grundkurs (L543, ALBA WP7)
-### am Institut für Berufliche Bildung und Arbeitslehre
-### der TU-Berlin für das Sommersemster 2020
+### Institut für Berufliche Bildung und Arbeitslehre - TU-Berlin, Sommersemster 2020
 
-Der Kurs findet in diesem Semester ausschließlich online statt! Den Einschreibeschlüssel und Link für die Teilnahme erhalten Sie per E-Mail.
+Der Kurs findet in diesem Semester ausschließlich **online** statt!
+
+Den Einschreibeschlüssel und Link für die Teilnahme am Online-Kurs erhalten Sie per E-Mail.
 
 **WICHTIG:** Für die Teilnahme am Kurs benötigen Sie ein eigenes Notebook, Laptop oder Desktop-PC. Die Betreuung  
- des Kurses erfolgt nach dem Flipped-Classroom-Prinzip. D.h. Sie lernen relativ eigenständig und nutzen dafür eine  
- eingens eingerichtete Moodle-Plattform. Fragen werden per Forum, Chat und Videosprechstunden geklärt.
+des Kurses erfolgt nach dem Flipped-Classroom-Prinzip. D.h. Sie lernen relativ selbständig und nutzen dafür eine  
+eigens eingerichtete Moodle-Lern-Plattform. Fragen werden per Forum, Chat und Online-Videosprechstunden beantwortet.
 
- Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.12) auf Ihrem Computer.
+Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.12) auf Ihrem Computer.
 
 Für die Arduino-Starterkits wird ein Pfand in Höhe von 30,- € eingesammelt, das Sie bei Rückgabe des vollständigen und unbeschädigten Sets zurück erhalten.
 
@@ -91,7 +92,7 @@ Das kostenlose Programm können Sie hier für [Windows, MacOS oder Linux herunte
 
 Im Unterverzeichnis [Fritzing](https://https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing) finden Sie alle Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben:
 
-![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg)
+![Arduino Nano mit LED](http://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg)
 
 ### Arduino Code-Referenz Handbuch
 Das deutsche Arduino Forum hat ein sehr ausführliches Code-Referenz-Handbuch erstellt, in dem sämtliche Funktionen
