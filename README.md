@@ -1,5 +1,5 @@
-## Arduino Grundkurs (L543, ALBA WP7)
-### Institut für Berufliche Bildung und Arbeitslehre - TU-Berlin, Sommersemster 2020
+## Arduino Grundkurs - TU-Berlin (L543, ALBA WP7)
+### Institut für Berufliche Bildung und Arbeitslehre - Sommersemster 2020
 
 Der Kurs findet in diesem Semester ausschließlich **online** statt!
 
@@ -17,8 +17,11 @@ Für die Arduino-Starterkits wird ein Pfand in Höhe von 30,- € eingesammelt, 
 
 ### Installation der Arduino-Entwicklungsumgebung
 Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für Ihr Betriebssystem herunter.
+
 * [Link zum Download der Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software)
+
 Eine Installationsanleitung für Windows, MacOSX oder Linux finden Sie unter diesem Link:
+
 * [Installationsanleitung](https://www.arduino.cc/en/Guide/HomePage)
 
 ### Treiber
@@ -92,7 +95,7 @@ Das kostenlose Programm können Sie hier für [Windows, MacOS oder Linux herunte
 
 Im Unterverzeichnis [Fritzing](https://https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing) finden Sie alle Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben:
 
-![Arduino Nano mit LED](http://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg)
+![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg)
 
 ### Arduino Code-Referenz Handbuch
 Das deutsche Arduino Forum hat ein sehr ausführliches Code-Referenz-Handbuch erstellt, in dem sämtliche Funktionen
@@ -110,32 +113,25 @@ noch einmal nachzubereiten:
 
 ### Probleme mit den Ultraschallsensoren
 Bitte beim Stecken der Schaltung auf die Orientierung des Sensors achten und VCC/GND nicht verwechseln!
-![HC-SR04](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/13_Ultraschall.jpg)
+
+![HC-SR04](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/13_Ultraschall.jpg)
 
 Ein Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird.
- In anderen Worten, der Sensor wartet für eine unbegrenzte Zeit auf das eintreffende Echo. Abhilfe schafft
+In anderen Worten, der Sensor wartet für eine unbegrenzte Zeit auf das eintreffende Echo. Abhilfe schafft
 die Programmierung eines "Timeouts":
 
 ```
 duration = pulseIn(echoPin, HIGH, 30000);
 ```
 
-und ein "Reset" des Sensors. Auf den echoPin wird dafür ein LOW für 200 us geschrieben.
-Im folgenden Sketch wird außerdem die Ausgabe der Distanz in cm auf ein Intervall zwischen 5
-und 400 cm begrenzt.
+und ein "Reset" des Sensors. Auf den echoPin wird dafür ein LOW für 200 us geschrieben. Im folgenden Sketch wird außerdem die Ausgabe der Distanz in cm auf ein Intervall zwischen 5 und 400 cm begrenzt.
 
-[Ping Sketch mit Workaround](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/10_ping_timeout/10_ping_timeout.ino)
+[Ping Sketch mit Workaround](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/10_ping_timeout/10_ping_timeout.ino)
 
-Durch diesen Workaround ist der Sensor voll funktionstüchtig. Vorsicht bei der Verwendung von einigen
-Bibliotheken! Nicht alle unterstützen diesen Workaround.
+Durch diesen Workaround ist der Sensor voll funktionstüchtig. Vorsicht bei der Verwendung von einigen Bibliotheken! Nicht alle unterstützen diesen Workaround.
 
 ### Verwendung von Bibliotheken
-Für die meisten Bauteile gibt es Bibliotheken, die das Programmieren - gerade für Anfänger - erheblich vereinfachen.
-Bibliotheken lassen sich über das Menü der Arduino-IDE "Sketch > Bibiothek einbinden > Bibliothek verwalten"
-suchen und installieren. Bevor eine Bibliothek in einem Sketch verwendet werden kann muss eine sogenannte Header-Datei
-(Dateiendung *.h) eingebunden werden. Das erfolgt mit der #include ```<library.h>``` Anweisung. Zu jeder Library
-werden gewöhnlich Code-Beispiele mitgeliefert, welche die Verwendung der Bibliothek erklären. Für den Ultraschallsensor
-können wir z.B. die NewPing Library verwenden:
+Für die meisten Bauteile gibt es Bibliotheken, die das Programmieren - gerade für Anfänger - erheblich vereinfachen. Bibliotheken lassen sich über das Menü der Arduino-IDE "Sketch > Bibiothek einbinden > Bibliothek verwalten" auffinden und installieren. Bevor eine Bibliothek in einem Sketch verwendet werden kann muss eine sogenannte Header-Datei (Dateiendung *.h) importiert werden. Das erfolgt mit der #include ```<library.h>``` Anweisung. Zu jeder Library werden gewöhnlich Code-Beispiele mitgeliefert, welche die Verwendung der Bibliothek erklären. Für den Ultraschallsensor können wir z.B. die NewPing Library verwenden:
 ```
 #include <NewPing.h>
 
@@ -157,18 +153,15 @@ void loop() {
 }
 ```
 
-Wenn die NewPing Library verwendet wird, genügt es die Anschluss-Pins und ein "Sensor-Objekt" (hier: "sonar" genannt) zu deklarieren.
-Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch der eigene Programmieraufwand erheblich reduziert wird und
- wesentlich "übersichtlicherer" Code entsteht.
+Wenn die NewPing Library verwendet wird, genügt es die Anschluss-Pins zu deklarieren und eine Instanz des "Sensor-Objekts" zu erzeugen (hier wurde dem Objekt der Name "sonar" gegeben).
+
+Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch der eigene Programmieraufwand erheblich reduziert wird.
 
 ### 16x2 LCD mit PCF8574 Backplate / Barometer BMP280
 
-![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/Fritzing/17_BMP280_16x2_LCD.jpg)
+![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/17_BMP280_16x2_LCD.jpg)
 
-Zur Verwendung von Bauteilen mit I2C-Anschluss muss die korrekte Adresse im Arduino-Sketch konfiguriert werden. Wenn die Adresse nicht
-bekannt ist kann diese mit der I2C-detect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek verwalten
-Bibliothek einbinden" installiert werden. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im
-seriellen Monitor die Adressen sämtlicher angeschlossener I2C Bauteile angezeigt:
+Zur Verwendung von Bauteilen mit I2C-Anschluss muss die korrekte Adresse im Arduino-Sketch konfiguriert werden. Wenn die Adresse nicht bekannt ist kann diese mit der i2cdetect Library ermittelt werden. Die Bibliothek kann über das Menü "Sketch > Bibliothek verwalten Bibliothek einbinden" installiert werden. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im seriellen Monitor die Adressen aller angeschlossenen I2C Bauteile sichtbar:
 
 ```
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
@@ -184,16 +177,15 @@ seriellen Monitor die Adressen sämtlicher angeschlossener I2C Bauteile angezeig
 
 Die 16x2 LC Displays mit PCF8574-Backplate haben entweder die Adresse 0x3F oder 0x27. Der BMP280 Sensor (Barometer) hört auf die Adresse 0x76.
 
-Manchmal kann es erforderlich sein die Adresse direkt in den C-Header Dateien der Bibliotheken einzustellen. Dafür navigiert man in das Arduino-Library Verzeichnis (z.B. unter Windows: Meine Dokumente/Arduino/libraries) und öffnet die betroffene Header-Datei. Für den BMP280 Sensor ist das die Datei ```Adafruit_BMP280.h```. Dort trägt man in der Zeile
+Manchmal kann es erforderlich sein die Adresse direkt in den C-Header Dateien der Bibliotheken zu ändern. Dafür navigiert man in das Arduino-Library Verzeichnis (z.B. unter Windows: Meine Dokumente/Arduino/libraries) und öffnet die betroffene Header-Datei. Für den BMP280 Sensor betrifft das die Datei ```Adafruit_BMP280.h```. Dort trägt man in der Zeile
 
 ```
  #define BMP280_ADDRESS (0x76)
 ```
 
-0x76 statt der vorgegebenen Adresse 0x77 ein.
-Beim Anschließen der I2C Bauteile ist auf die Polarität GND/VCC und Spannungsversorgung zu achten (5V bzw **3V3 für das Barometer!**)
-Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano verbunden. Der SCL Pin mit dem Pin A5 des Arduino.
-In jedem Fall muss die **Beschriftung der Pins auf dem Bauteil** beachtet werden!
+0x76 anstelle der voreingestellten Adresse 0x77 ein. Beim Anschließen der I2C Bauteile ist auf die Polarität GND/VCC sowie die Spannungsversorgung zu achten (**3V3 für das Barometer!**)
+
+Der SDA Pin des LCD und/oder des Barometers wird mit dem Pin A4 des Arduino Nano verbunden. Der SCL Pin mit dem Pin A5 des Arduino. In jedem Fall muss die Beschriftung der Pins **auf dem Bauteil** beachtet werden!
 
 ## Prüfungsaufgabe
 Wird zu einem späteren Zeitpunkt bekannt gegeben.
