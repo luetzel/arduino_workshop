@@ -1,19 +1,22 @@
 ## Arduino Grundkurs - TU-Berlin (L543, ALBA WP7)
-### Institut für Berufliche Bildung und Arbeitslehre - Sommersemster 2020
+### Institut für Berufliche Bildung und Arbeitslehre - Sommersemester 2020
 
 Der Kurs findet in diesem Semester ausschließlich **online** statt!
+
+Der Termin für den Kurs-Start wird noch bekannt gegeben.
 
 Den Einschreibeschlüssel und Link für die Teilnahme am Online-Kurs erhalten Sie per E-Mail.
 
 **WICHTIG:** Für die Teilnahme am Kurs benötigen Sie ein eigenes Notebook, Laptop oder Desktop-PC. Die Betreuung  
 des Kurses erfolgt nach dem Flipped-Classroom-Prinzip. D.h. Sie lernen relativ selbständig und nutzen dafür eine  
-eigens eingerichtete Moodle-Lern-Plattform. Fragen werden per Forum, Chat und Online-Videosprechstunden beantwortet.
+eigens eingerichtete Moodle-Lern-Plattform. Fragen werden per Forum, Chat und Online-Video-Sprechstunden beantwortet.
 
 Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.12) auf Ihrem Computer.
 
-Für die Arduino-Starterkits wird ein Pfand in Höhe von 30,- € eingesammelt, das Sie bei Rückgabe des vollständigen und unbeschädigten Sets zurück erhalten.
+Für die Arduino-Starterkits wird ein Pfand in Höhe von 30,- € erhoben, das Sie bei Rückgabe des vollständigen und unbeschädigten Kits zurück erhalten.
 
-**Der Termin für die Abholung der Kits wird noch bekannt gegeben. Bitte bringen Sie den Betrag möglichst passend mit!**
+**Der Termin und der Ort für die Übergabe/ Abholung der Kits wird noch bekannt gegeben.
+Bitte bringen Sie den Betrag möglichst passend mit, weil ich keine großen Summen Wechselgeld bereithalten kann!**
 
 ### Installation der Arduino-Entwicklungsumgebung
 Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für Ihr Betriebssystem herunter.
@@ -26,12 +29,12 @@ Eine Installationsanleitung für Windows, MacOSX oder Linux finden Sie unter die
 
 ### Treiber
 Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wollen, müssen Sie
-zusätzlich einen Treiber für den CH340-USB-Controller-Chip installieren, damit Sie die im Kurs verwendeten Arduino Nano V3 Platinen mit Ihrem Gerät über den USB-Anschluss programmieren können.
+zusätzlich einen Treiber für den CH340-USB-Controller-Chip installieren, damit Sie die im Kurs verwendeten Arduino Nano Platinen mit Ihrem Notebook/ PC über den USB-Anschluss programmieren können.
 
 * [Link zum Download der Treiber](https://wiki.wemos.cc/downloads)
 * [Offizieller Treiber des Herstellers](http://www.wch.cn/download/CH341SER_EXE.html)
 
-Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen so verändern, dass Sie unsignierte Treiber installieren dürfen.
+Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen so verändern, dass Sie auch unsignierte Treiber auf Ihrem Gerät installieren können.
 
 #### Probleme mit Apple-Geräten
 Auf Apple-Geräten kann es bei Verwendung des falschen Treibers zu System-Abstürzen kommen (Kernel-Panic). Betroffen davon sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra". Abhilfe schafft ein Treiber, der [hier heruntergeladen](http://download.makeblock.com/mblock/CH34x_Install_V1.3.pkg)
@@ -42,11 +45,13 @@ Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden,
 [Wie finde ich den richtigen COM-Port? (Video)](https://www.youtube.com/watch?v=hou4okcCX7E)
 
 #### Hinweise für Linux-Nutzer
-Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE, etc.) verwenden,
-ist in der Regel kein Treiber erforderlich, denn der Linux-Kernel unterstützt den CH340-Chip bereits.
-Beim Linux-Kernel 5.5.x wurden Veränderungen am CH340 Kernel-Modul vorgenommen, die dazu geführt haben, dass keine Programme in den Flash-Speicher des Arduino übertragen werden konnten. Sollten Sie einen Kernel einsetzen, der älter als Version 5.5.8 ist, sollte ein Kernel-Update helfen.
+Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE o. ä.) verwenden,
+müssen Sie in der Regel keinen Treiber installieren, denn der Linux-Kernel unterstützt den CH340-Chip out-of-the-box.
 
-Damit Sie unter Linux nicht mit Administrator-Rechten arbeiten müssen, fügen Sie ihren Benutzernamen der Gruppe `dialout` hinzu. Das geht mit:
+Beim Linux-Kernel ab der Version 5.5.x wurden Veränderungen am CH340-Modul vorgenommen, die dazu geführt haben, dass man plötzlich keine Firmware in den Flash-Speicher des Arduino übertragen konnte. Falls Sie noch einen Kernel einsetzen, der älter als Patch-Level 5.5.8 ist, sollten Sie ein Kernel-Update durchführen, um das Problem zu beheben.
+
+Damit Sie unter Linux auf den Seriellen Port schreiben können, müssen Sie ihren Benutzernamen der Gruppe `dialout` hinzufügen. Das geht mit:
+
 `sudo usermod -a -G dialout username`
 Damit erlangen Sie als normaler Benutzer Schreibrechte für /dev/ttyUSB0 Port.
 
