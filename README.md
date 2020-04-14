@@ -1,25 +1,17 @@
-## Arduino-Workshop
-### Arduino-Workshop am Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin im Wintersemester 2019
+## Arduino Grundkurs (L543, ALBA WP7)
+### Institut für Berufliche Bildung und Arbeitslehre der TU-Berlin für das Sommersemster 2020
 
-Der Kurs findet immer freitags ab dem **25.10.2019** bis einschließlich **13.12.2019** an den folgenden Terminen
+Der Kurs findet in diesem Semester ausschließlich online statt! Den Einschreibeschlüssel und Link für die Teilnahme erhalten Sie per E-Mail.
 
-	25.10.19,
-	01.11.19,
-	08.11.19 (fällt aus),
-	15.11.19,
-	22.11.19,
-	29.11.19,
-	06.12.19,
-	13.12.19
+**WICHTIG:** Für die Teilnahme am Kurs benötigen Sie ein eigenes Notebook, Laptop oder Desktop-PC. Die Betreuung  
+ des Kurses erfolgt nach dem Flipped-Classroom-Prinzip. D.h. Sie lernen relativ eigenständig und nutzen dafür eine  
+ eingens eingerichtete Moodle-Plattform. Fragen werden per Forum, Chat und Videosprechstunden geklärt.
 
-jeweils von **08:00 Uhr c.t.** bis **12:15 Uhr** statt.
+ Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.12) auf Ihrem Computer.
 
-**WICHTIG:** Bitte bringen Sie ihr eigenes Notebook oder Laptop mit und installieren Sie bitte vorab die
- aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.10).
+Für die Arduino-Starterkits wird ein Pfand in Höhe von 30,- € eingesammelt, das Sie bei Rückgabe des vollständigen und unbeschädigten Sets zurück erhalten.
 
-Für die Startersets wird am ersten Tag ein Pfand von 20,- € eingesammelt,
- das Sie bei Rückgabe des vollständigen und unbeschädigten Sets zurück erhalten.
-**Bitte bringen Sie den Betrag möglichst passend mit!**
+**Der Termin für die Abholung der Kits wird noch bekannt gegeben. Bitte bringen Sie den Betrag möglichst passend mit!**
 
 ### Installation der Arduino-Entwicklungsumgebung
 Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für Ihr Betriebssystem herunter.
@@ -29,43 +21,39 @@ Eine Installationsanleitung für Windows, MacOSX oder Linux finden Sie unter die
 
 ### Treiber
 Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wollen, müssen Sie
-zusätzlich einen Treiber für den CH340-Chip installieren, damit Sie die im Kurs verwendeten Arduino Nano V3
- Platinen mit Ihrem Gerät über den USB-Anschluss programmieren können.
+zusätzlich einen Treiber für den CH340-USB-Controller-Chip installieren, damit Sie die im Kurs verwendeten Arduino Nano V3 Platinen mit Ihrem Gerät über den USB-Anschluss programmieren können.
 * [Link zum Download der Treiber](https://wiki.wemos.cc/downloads)
 * [Offizieller Treiber des Herstellers](http://www.wch.cn/download/CH341SER_EXE.html)
-Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen verändern, damit Sie
-unsignierte Treiber installieren dürfen.
+Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen so verändern, dass Sie unsignierte Treiber installieren dürfen.
 
 #### Probleme mit Apple-Geräten
-Auf Apple-Geräten kann es bei Verwendung des falschen Treibers zu System-Abstürzen kommen (Kernel-Panic).
-Betroffen davon sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra".
-Abhilfe schafft ein Treiber, der [hier heruntergeladen](http://download.makeblock.com/mblock/CH34x_Install_V1.3.pkg)
+Auf Apple-Geräten kann es bei Verwendung des falschen Treibers zu System-Abstürzen kommen (Kernel-Panic). Betroffen davon sind nach meiner Recherche ausschließlich Geräte mit MacOS "Sierra". Abhilfe schafft ein Treiber, der [hier heruntergeladen](http://download.makeblock.com/mblock/CH34x_Install_V1.3.pkg)
  werden kann.
 
 #### Den richtigen COM-Port finden
-Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden, mit dem der Arduino
-per USB verbunden ist. Dieses Video erklärt wie das mit dem Windows-Geräte Manager geht:
+Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden, mit dem der Arduino per USB verbunden ist. Dieses Video erklärt wie man den korrekten USB-Port mit dem Windows-Geräte-Manager findet:
 [Wie finde ich den richtigen COM-Port? (Video)](https://www.youtube.com/watch?v=hou4okcCX7E)
 
 #### Hinweise für Linux-Nutzer
 Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE, etc.) verwenden,
-ist kein Treiber erforderlich, denn der Linux-Kernel unterstützt den CH340-Chip bereits.
-Damit Sie unter Linux nicht mit Administratorrechten arbeiten müssen, fügen Sie ihren Benutzernamen der
-Gruppe `dialout` hinzu. Das geht mit:
-`sudo usermod -a -G dialout username`
-Damit erlangen Sie als normaler Benutzer Schreibrechte für /dev/ttyUSB0
+ist in der Regel kein Treiber erforderlich, denn der Linux-Kernel unterstützt den CH340-Chip bereits.
+Beim Linux-Kernel 5.5.x wurden Veränderungen am CH340 Kernel-Modul vorgenommen, die dazu geführt haben, dass keine Programme in den Flash-Speicher des Arduino übertragen werden konnten. Sollten Sie einen Kernel einsetzen, der älter als Version 5.5.8 ist, sollte ein Kernel-Update helfen.
 
-### Beispiel-Code
-Ab 15. Oktober 2019 können Sie hier alle [Beispiel-Codes](https://github.com/luetzel/arduino_workshop/archive/master.zip)
- und weiteres Arbeitsmaterial für die praktischen Übungen herunterladen.
+Damit Sie unter Linux nicht mit Administrator-Rechten arbeiten müssen, fügen Sie ihren Benutzernamen der Gruppe `dialout` hinzu. Das geht mit:
+`sudo usermod -a -G dialout username`
+Damit erlangen Sie als normaler Benutzer Schreibrechte für /dev/ttyUSB0 Port.
+
+### Beispiel-Codes
+Ab dem 20. April 2020 können Sie hier alle [Beispiel-Codes](https://gogs.raspberryblog.de/superuser/arduino_workshop/archive/master.zip) und weiteres Arbeitsmaterial für die praktischen Übungen herunterladen.
 Das Verzeichnis wird im Verlauf des Kurses gelegentlich aktualisert.
+
 Wenn Sie das Tool ['git'](https://git-scm.com/download) auf Ihrem System installiert haben, können Sie den Beispiel-Code auch durch Eingabe des Befehls:
 
 ```
-git clone https://github.com/luetzel/arduino_workshop.git
+git clone https://gogs.raspberryblog.de/superuser/arduino_workshop.git
 ```
 
-herunterladen und später mit
+herunterladen und im Fall von Updates später mit
 
 ```
 git pull
@@ -76,11 +64,12 @@ aktualisieren.
 Die Inhalte des Verzeichnis `sketches` bzw. `libraries` kopieren Sie bitte in die zugehörigen Unter-Verzeichnisse,
 die auf Ihrem System während der Installation der  Arduino-Entwicklungsumgebung angelegt wurden.
 Unter Windows ist das in der Regel das Verzeichnis `Meine Dokumente/Arduino`.
-In das Verzeichnis libraries kopieren Sie zusätzliche Bibliotheken, die die Verwendung von verschiedener Hardware-Module
-erleichtern.
+
+In das Verzeichnis libraries kopieren Sie zusätzliche Bibliotheken, welche die Verwendung von verschiedener Hardware-Module erleichtern.
 
 ### Unterstützung anderer Mikrocontroller
 Inzwischen kann man mit der Arduino-IDE auch andere Mikrocontroller programmieren. Die Installation der dafür erforderlichen Dateien kann über den Board-Manager der Arduino-IDE erfolgen.
+
 Die URLs zu den Paketquellen können in den Einstellungen der Arduino-IDE hinterlegt werden. Eine Anleitung dafür findet man auf dieser Seite:
 
 https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
@@ -88,20 +77,18 @@ https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-supp
 ### Datenblätter
 Im Verzeichnis `Datasheets` finden Sie eine Sammlung von Datenblättern zu den im Starter-Kit enthaltenen
 Bauteilen. Bitte beachten Sie, dass das Starter-Kit zum Teil baugleiche Teile anderer Hersteller enthält.
-Das Barometer-Breakout (BMP208) benötigt eine Versorgungsspannung *3,3 Volt* und darf deshalb
-*nicht* mit 5 Volt Versorgungsspannung betrieben werden!
+Das Barometer-Breakout-Modul (BMP280) benötigt eine Versorgungsspannung **3,3 Volt** und darf deshalb
+**nicht** mit 5 Volt Versorgungsspannung betrieben werden! Der Sensor wird sonst zerstört!
 
 ### Fritzing.org
-Optional können Sie Fritzing auf Ihrem Gerät installieren. Mit Fritzing kann man elektronische
-Schaltungen am Computer zeichnen bzw. dokumentieren. Die Bauteile können per drag'n drop auf
-dem Steckbrett platziert werden.
+Für das Zeichnen von Schaltskizzen sollten Sie das kostenlose Programm Fritzing auf Ihrem Gerät installieren.
+Mit Fritzing lassen sich elektronische Schaltungen am Computer zeichnen und dann als JPG-Bild exportieren. Die Bauteile können per drag'n drop auf dem Steckbrett platziert werden. Die Bedienung ist recht intuitiv.
 
-Das kostenlose Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](http://Fritzing.org/download/).
+Das kostenlose Programm können Sie hier für [Windows, MacOS oder Linux herunterladen](https://github.com/fritzing/fritzing-app/releases/tag/CD-548). Es handelt sich dabei um eine Entwickler-Version. Falls das Programm nicht startet oder abstürzt, sentzen Sie eine ältere Version ein.
 
-Im Unterverzeichnis [Fritzing](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing) finden Sie die
- Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben:
+Im Unterverzeichnis [Fritzing](https://https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing) finden Sie alle Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben:
 
-![Arduino Nano mit LED](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/01_LED.jpg)
+![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing/01_LED.jpg)
 
 ### Arduino Code-Referenz Handbuch
 Das deutsche Arduino Forum hat ein sehr ausführliches Code-Referenz-Handbuch erstellt, in dem sämtliche Funktionen
