@@ -12,16 +12,15 @@ eigens eingerichtete Moodle-Lern-Plattform.
 * Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.12) auf Ihrem Computer.
 * Für die Arduino-Starterkits wird ein Pfand in Höhe von 30,- € erhoben, das Sie bei Rückgabe des vollständigen und unbeschädigten Kits zurück erhalten.
 * Der Termin und der Ort für die Übergabe/ Abholung der Kits wird noch bekannt gegeben. 
-* Bitte bringen Sie den Betrag möglichst passend mit, weil ich keine großen Summen Wechselgeld bereithalten kann!**
+* **Bitte bringen Sie den Betrag möglichst passend mit, weil ich keine großen Summen Wechselgeld bereithalten kann!**
 
 ### Installation der Arduino-Entwicklungsumgebung
 Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für Ihr Betriebssystem herunter.
 
 * [Link zum Download der Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software)
 
-* Eine Installationsanleitung für Windows, MacOSX oder Linux finden Sie unter diesem Link:
-
- [Installationsanleitung](https://www.arduino.cc/en/Guide/HomePage)
+* Eine Installationsanleitung für Windows, MacOSX oder Linux finden Sie unter diesem Link: 
+[Installationsanleitung](https://www.arduino.cc/en/Guide/HomePage)
 
 ### Treiber
 Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wollen, müssen Sie zusätzlich einen Treiber für den CH340-USB-Controller-Chip installieren,
