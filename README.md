@@ -95,7 +95,8 @@ Das kostenlose Programm können Sie hier für [Windows, MacOS oder Linux herunte
  Falls das Programm nicht startet oder abstürzt, versuchen Sie bitte eine ältere Version zu installieren.
 
 Im Unterverzeichnis [Fritzing](https://https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing) finden Sie einige Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben,
-sowohl als JPG-Bild, als auch im Fritzing-Datei-Format. Wenngleich die Bauteil-Bibliothek von Fritzing sehr umfangreich ist, sind nicht alle Bauteile des Starterkits enthalten. Im Verzeichnis Fritzing-parts finden Sie weitere 
+sowohl als JPG-Bild, als auch im Fritzing-Datei-Format. Wenngleich die Bauteil-Bibliothek von Fritzing sehr umfangreich ist, sind nicht alle Bauteile des Starterkits enthalten. Im Verzeichnis Fritzing-Zusatzbauteile finden Sie 
+weitere 
 Bauteile, die Sie der Bibliothek per drag'n'drop hinzufügen können.
 
 ![Arduino Nano mit LED](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg)
