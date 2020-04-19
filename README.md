@@ -98,7 +98,7 @@ sowohl als JPG-Bild, als auch im Fritzing-Datei-Format. Wenngleich die Bauteil-B
 weitere 
 Bauteile, die Sie der Bibliothek per drag'n'drop hinzufügen können.
 
-<img src="https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg" width=30% />
+<img src="https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg" width="30%" />
 
 ### Arduino Code-Referenz Handbuch
 Das deutsche Arduino Forum hat ein sehr ausführliches Code-Referenz-Handbuch erstellt, in dem sämtliche Funktionen der Arduino-IDE dokumentiert sind. Es ist verständlich geschrieben und für Anfänger geeignet. Das Handbuch kann 
