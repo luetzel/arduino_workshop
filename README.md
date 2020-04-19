@@ -96,7 +96,7 @@ Das kostenlose Programm können Sie hier für [Windows, MacOS oder Linux herunte
 Im Unterverzeichnis [Fritzing](https://https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing) finden Sie einige Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben,
 sowohl als JPG-Bild, als auch im Fritzing-Datei-Format. Wenngleich die Bauteil-Bibliothek von Fritzing sehr umfangreich ist, sind nicht alle Bauteile des Starterkits enthalten. Im Verzeichnis Fritzing-Zusatzbauteile finden Sie weitere Bauteile, die Sie der Bibliothek per drag'n'drop hinzufügen können.
 
-![LED-Schaltplan](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg)"
+![LED-Schaltplan](https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg)
 
 ### Arduino Code-Referenz Handbuch
 Das deutsche Arduino Forum hat ein sehr ausführliches Code-Referenz-Handbuch erstellt, in dem sämtliche Funktionen der Arduino-IDE dokumentiert sind. Es ist verständlich geschrieben und für Anfänger geeignet. Das Handbuch kann 
