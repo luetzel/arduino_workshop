@@ -94,11 +94,9 @@ Das kostenlose Programm können Sie hier für [Windows, MacOS oder Linux herunte
  Falls das Programm nicht startet oder abstürzt, versuchen Sie bitte eine ältere Version zu installieren.
 
 Im Unterverzeichnis [Fritzing](https://https://gogs.raspberryblog.de/superuser/arduino_workshop/blob/master/Fritzing) finden Sie einige Schaltpläne, die Sie während der praktischen Übungen kennengelernt haben,
-sowohl als JPG-Bild, als auch im Fritzing-Datei-Format. Wenngleich die Bauteil-Bibliothek von Fritzing sehr umfangreich ist, sind nicht alle Bauteile des Starterkits enthalten. Im Verzeichnis Fritzing-Zusatzbauteile finden Sie 
-weitere 
-Bauteile, die Sie der Bibliothek per drag'n'drop hinzufügen können.
+sowohl als JPG-Bild, als auch im Fritzing-Datei-Format. Wenngleich die Bauteil-Bibliothek von Fritzing sehr umfangreich ist, sind nicht alle Bauteile des Starterkits enthalten. Im Verzeichnis Fritzing-Zusatzbauteile finden Sie weitere Bauteile, die Sie der Bibliothek per drag'n'drop hinzufügen können.
 
-<img src="https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg" width="30%" />
+<img src="https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/01_LED.jpg" width="30%"/>
 
 ### Arduino Code-Referenz Handbuch
 Das deutsche Arduino Forum hat ein sehr ausführliches Code-Referenz-Handbuch erstellt, in dem sämtliche Funktionen der Arduino-IDE dokumentiert sind. Es ist verständlich geschrieben und für Anfänger geeignet. Das Handbuch kann 
@@ -117,7 +115,7 @@ Das Elektronik-Kompendium ist ein sehr gutes Nachschlagwerk, um die im Kurs beha
 ### Probleme mit den Ultraschallsensoren
 Bitte achten Sie beim Zusammenstecken der Schaltung auf die Orientierung des Sensors! VCC und GND dürfen nicht verwechselt werden!
 
-<img src="https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/13_Ultraschall.jpg" width=30%/>
+<img src="https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/13_Ultraschall.jpg" width="30%"/>
 
 Ein Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird. In anderen Worten, der Sensor wartet für eine unbegrenzte
  Zeit auf das eintreffende Echo. Abhilfe schafft die Programmierung eines "Timeouts", das den Sensor nach einer bestimmten Wartezeit zurücksetzt:
@@ -163,7 +161,7 @@ Die Funktion "ping_cm()" wird von der Bibliothek bereitgestellt, wodurch der eig
 
 ### 16x2 LCD mit PCF8574 Backplate und Barometer BMP280
 
-<img src="https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/17_BMP280_16x2_LCD.jpg" width=30% />
+<img src="https://gogs.raspberryblog.de/superuser/arduino_workshop/src/master/Fritzing/17_BMP280_16x2_LCD.jpg" width="30%" />
 
 Bei Verwendung von Bauteilen mit I2C-Bus muss die korrekte Adresse im Arduino-Sketch angegeben werden. Wenn die Adresse nicht bekannt ist, kann diese mit der i2cdetect Library ermittelt werden. Die Bibliothek wird über das Menü 
 "Sketch > Bibliothek verwalten > Bibliothek einbinden" installiert. Nach dem Hochladen des mitgelieferten Beispiels "i2cdetect" werden im seriellen Monitor die Adressen aller angeschlossenen I2C-Bauteile sichtbar, z.B.:
