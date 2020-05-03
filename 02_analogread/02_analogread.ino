@@ -1,4 +1,4 @@
-const int analogPin = A0;
+#define analogPin A0
 
 void setup() {
   Serial.begin(9600);

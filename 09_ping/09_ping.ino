@@ -1,6 +1,6 @@
 
-const int pingPin = 7;
-const int trigPin = 8;
+#define pingPin 7
+#define trigPin 8
 
 void setup() {
   Serial.begin(9600);

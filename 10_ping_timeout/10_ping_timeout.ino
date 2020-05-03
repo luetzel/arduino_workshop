@@ -1,6 +1,6 @@
 // Anschlüsse konfigurieren
-const int echoPin = 8;
-const int trigPin = 7; 
+#define echoPin 8
+#define trigPin 7 
 
 // Pins als Input/Output konfigurieren
 void setup() {

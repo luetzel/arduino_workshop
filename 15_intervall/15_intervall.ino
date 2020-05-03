@@ -1,8 +1,8 @@
 
 // Der folgende Code funktioniert nicht wie erhofft ...
-const int ledPinBlink = 13; // Rote Blink-LED-Pin 13
-const int ledPinTaster = 10; // Gelbe Taster-LED-Pin 10
-const int tasterPin = 8; // Taster-Pin 8
+#define ledPinBlink 13 // Rote Blink-LED-Pin 13
+#define ledPinTaster 10 // Gelbe Taster-LED-Pin 10
+#define tasterPin 8 // Taster-Pin 8
 bool tasterStatus; // Variable zur Aufname des Tasterstatus
 void setup(){
  pinMode(ledPinBlink, OUTPUT); // Blink-LED-Pin als Ausgang 

@@ -4,8 +4,8 @@
 PCF8574 expander(0x20);
 
 // Anschlüsse konfigurieren
-const int echoPin = 8;
-const int trigPin = 7;
+#define echoPin 8
+#define trigPin 7
 int distance;
 
 // Pins als Input/Output konfigurieren

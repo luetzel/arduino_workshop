@@ -1,6 +1,6 @@
 #include <CapacitiveSensor.h>
-const int receivePin = 12;
-const int sendPin = 2;
+#define receivePin 12
+#define sendPin 2
 CapacitiveSensor sens = CapacitiveSensor(sendPin,receivePin); 
 
 void setup() { 

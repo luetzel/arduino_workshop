@@ -1,7 +1,7 @@
 
-int potPin= A0;
-int ldrPin= A1;
-int ledPin= 9; 
+#define potPin A0
+#define ldrPin A1
+#define ledPin 9 
 int potValue;
 int ldrValue;
 

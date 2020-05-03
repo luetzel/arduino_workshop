@@ -1,6 +1,6 @@
 
-const int ledPin = 13; // LED-Pin 13
-const int tasterPin = 8; // Taster-Pin 8
+#define ledPin 13 // LED-Pin 13
+#define tasterPin 8 // Taster-Pin 8
 bool tasterStatus; // Variable zur Aufname des Tasterstatus
 
 void setup(){

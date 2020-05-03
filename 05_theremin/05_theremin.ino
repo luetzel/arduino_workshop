@@ -1,5 +1,5 @@
-int speakerPin = 12;
-int analogPin = A0;
+#define speakerPin 12
+#define analogPin A0
 
 void setup() {
   Serial.begin(9600);

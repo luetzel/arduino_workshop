@@ -1,6 +1,6 @@
-int taktPin = 8;
-int speicherPin = 9;
-int datenPin = 10;
+#define taktPin 8
+#define speicherPin 9
+#define datenPin 10
 
 /* Shift Register
 OE (Pin13) => GND

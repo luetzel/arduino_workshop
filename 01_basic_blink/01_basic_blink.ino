@@ -1,8 +1,11 @@
-// #define is an instruction for the C preprocessor and works like an
-// alias. In the example below, LED_PIN is replaced by 13 before
-// the code is compiled
-int LED_PIN = 13;
-//#define LED_PIN 13
+/* #define is an instruction for the C preprocessor and works like an
+   alias. In the example below, LED_PIN is replaced by 13 before
+   the code is compiled
+   int LED_PIN = 13;
+   Declaring integer variables as constants is not recommend and always
+   should be avoided, since it takes too much flash memory!
+*/
+#define LED_PIN 13
 #define BLINK_TIME 100
 
 // the setup function runs once when you press reset or power the board

@@ -1,5 +1,5 @@
-int countPin = 2;
-int resetPin = 3;
+#define countPin 2
+#define resetPin 3
 
 void setup() {
   // put your setup code here, to run once:

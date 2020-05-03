@@ -1,5 +1,5 @@
-int potPin= A0;
-int ledPin= 9; 
+#define potPin A0
+#define ledPin 9 
 int readValue;
 int writeValue;
 

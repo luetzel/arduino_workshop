@@ -21,9 +21,9 @@ QA  (Pin15) => a
 VCC (Pin16) => VCC
 */
 
-int taktPin = 8; 	// SH_CP
-int speicherPin = 9; 	// ST_CP
-int datenPin = 10; 	// DS
+#define taktPin 8 	// SH_CP
+#define speicherPin 9 	// ST_CP
+#define datenPin 10 	// DS
 
 /*
 Zur Darstellung der Zahlen von 0 bis 9 wird ein Array deklariert. Die Bitmuster wurden in

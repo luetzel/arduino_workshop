@@ -1,5 +1,5 @@
 
-int led = 9;
+#define led 9
 int brightness = 0;
 int fadeAmount = 5;
 
