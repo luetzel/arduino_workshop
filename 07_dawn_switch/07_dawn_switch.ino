@@ -1,29 +1,19 @@
-
-#define potPin A0
-#define ldrPin A1
-#define ledPin 9 
-int potValue;
-int ldrValue;
+const unsigned int ldrPin= A1;
+const unsigned int ledPin= 13;
 
 void setup() {
-  pinMode(potPin, INPUT);
   pinMode(ledPin, OUTPUT);
-  
   Serial.begin(9600);
 }
 
 void loop() {
- potValue = analogRead(potPin);
- ldrValue = analogRead(ldrPin);
+int ldrValue = analogRead(ldrPin);
 
- if (potValue >= ldrValue) {
-    digitalWrite( ledPin, 1);
+ if (600 > ldrValue) {
+    digitalWrite(ledPin,HIGH);
  }
  else {
-    digitalWrite( ledPin, 0);
+    digitalWrite(ledPin,LOW);
   }
- 
- Serial.println(potValue);
  Serial.println(ldrValue);
-
 }

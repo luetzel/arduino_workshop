@@ -1,10 +1,10 @@
-#define ledPin 9
-#define potPin A0
-#define ldrPin A1
+const unsigned int ledPin = 13;
+const unsigned int potPin = A0;
+const unsigned int ldrPin = A1;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
-  //Serial.begin(9600);
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -13,6 +13,7 @@ void loop() {
   //Serial.print("Poti: "); Serial.println(potValue);      // debug
   //Serial.print("LDR: "); Serial.println(ldrValue);
   //analogWrite(ledPin, map( potValue, 0, 1023, 0, 255) ); // DAC 8 Bit, 0 bis 255
+  
   // Wenn-Dann-Sonst Funktion
   if (ldrValue <= potValue ) {
     digitalWrite(ledPin, HIGH);
@@ -20,5 +21,5 @@ void loop() {
   else {
     digitalWrite(ledPin, LOW);
   }
-  delay(50);
+  delay(300);
 }
