@@ -1,6 +1,8 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BMP280.h>
 
+// die I2C Adresse 0x76 kann nur in der Adafruit_BMP280.h
+// eingestellt werden!
 Adafruit_BMP280 bme;
   
 void setup() {

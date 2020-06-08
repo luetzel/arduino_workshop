@@ -6,7 +6,7 @@
    should be avoided, since it takes too much flash memory!
 */
 #define LED_PIN 13
-#define BLINK_TIME 100
+#define BLINK_TIME 1000
 
 // the setup function runs once when you press reset or power the board
 void setup() {
