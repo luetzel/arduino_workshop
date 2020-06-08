@@ -6,11 +6,7 @@ Adafruit_BMP280 bme;
 void setup() {
   Serial.begin(9600);
   Serial.println(F("BMP280 test"));
-  
-  if (!bme.begin()) {  
-    Serial.println("Could not find a valid BMP280 sensor, check wiring!");
-    while (1);
-  }
+  bme.begin();
 }
   
 void loop() {

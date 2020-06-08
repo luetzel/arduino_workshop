@@ -2,8 +2,8 @@
 // Dadurch erhält der Programmierer Zugriff auf eine große Gruppe von
 // Standard-C-Bibliotheken (Gruppen vorgefertigter Funktionen) sowie auf speziell
 // für Arduino geschriebene Bibliotheken.
-#include <EEPROM.h>
-#include <Led.h>
+#include <EEPROM.h> // -> libraries 
+#include "Led.h" //
 
 // #define ist eine nützliche Programmieranweisung mit der man
 // einem konstanten Wert einen Namen geben kann. Definierte
@@ -97,15 +97,15 @@ int x = analogRead(A0);
 // Datentyp des Rückgabewerts vorangestellt. Gibt es keinen Rückgabewert, dann steht 'void'
 // vor dem Namen. Die runden Klammern bleiben entweder leer oder enthalten eine Liste von
 // Variablen, die der Funktion übergeben werden.
-
-int meinefunktion(int x, int y) {
-  return 32767;
+float meinefunktion(int x, int y) {
+  return x / y;
 }
 
 void loop() {
 // Kontrollstrukturen. Der Ablauf eines Programms wird in der Regel von Ereignissen, wie z.B.
 // Benutzereingaben (Knopf A gedrückt) gesteuert. Mit der if, else if, else Anweisung lässt sich
 // steuern was passieren soll, wenn eine bestimmte Bedingung erfüllt ist.
+meinefunktion(2,6);
 
 if (x > y) {
   Serial.println("x ist größer als y");
@@ -148,6 +148,7 @@ switch (var) {
 // Abbruch-Bedingung in (runden Klammern) erfüllt (wahr) ist. Von der while Schleife
 // gibt es zwei Varianten, bei denen die Bedingung jeweils vor (while) oder nach dem
 // (do .. while) ersten Durchlauf getestet wird.
+
 int i = 0;
 while(i < 3) {
   Serial.println("Hallo Welt!");
@@ -165,7 +166,7 @@ do {
 // konfigurieren, lässt sich die folgende for Schleife verwenden.
 
 for (int i = 0; i < 7; i++) {
-  pinMode(1, INPUT_PULLUP);
+  pinMode(i, INPUT_PULLUP);
 }
 
 // Interrupts. Bei längeren Programmen, die viele Funktionen enthalten, kann es vorkommen,
