@@ -7,15 +7,15 @@
 #include <Wire.h>
 #define DEVICE_ADDRESS  0x20
 
-byte bytearray[] =   { 0x00, // 0
-                       0x80, // 1
-                       0x40, // 2
-                       0x20, // 3
-                       0x10, // 4
-                       0x08, // 5
-                       0x04, // 6
-                       0x02, // 7
-                       0x01};// 8
+byte bytearray[] =   { 0x00, // 0b00000000 // 0
+                                    0x80, // 0b10000000 // 1
+                                    0x40, // 0b01000000
+                                    0x20, // 0b00100000
+                                    0x10, // 0b00010000
+                                    0x08, // 0b00001000
+                                    0x04, // 0b00000100
+                                    0x02, // 0b00000010
+                                    0x01};// 0b00000001
 
 void setup() {
   // put your setup code here, to run once:

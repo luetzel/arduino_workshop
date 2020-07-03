@@ -4,18 +4,18 @@
    LOW setzt. Der Status der Ports lässt sich durch lesen
    eines Bytes aus dem Port-Expander ermitteln.   
 */
-#include <Wire.h>
+#include <Wire.h> // Two-Wire
 #define DEVICE_ADDRESS  0x20
-
-byte bytearray[] =   { 0x00, // 0
-                       0x80, // 1
-                       0xC0, // 2
-                       0xE0, // 3
-                       0xF0, // 4
-                       0xF8, // 5
-                       0xFC, // 6
-                       0xFE, // 7
-                       0xFF};// 8
+                                               // P        01234567
+byte bytearray[] =   { 0b00000000, // 0 // 0b00000000
+                                    0x80, // 1 // 0b10000000
+                                    0b11000000, // 2 // 0b11000000
+                                    0xE0, // 3 // 0b11100000
+                                    0xF0, // 4
+                                    0xF8, // 5
+                                    0xFC, // 6
+                                    0xFE, // 7
+                                    0xFF};// 8 // 0b11111111
 
 void setup() {
   // put your setup code here, to run once:
@@ -31,8 +31,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for (int i; i <= 7; i++) {
-    i2c_write(~bytearray[i]);
+  for (int i = 1; i <= 7; i++) {
+    i2c_write(~bytearray[ i ]);
     delay(100);
   }
   for (int i; i <= 7; i++) {
