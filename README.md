@@ -1,5 +1,5 @@
-## Arduino Grundkurs - TU-Berlin (L543, ALBA WP7)
-### Institut für Berufliche Bildung und Arbeitslehre - Sommersemester 2020
+## Arduino Grundkurs - TU-Berlin (L543, Vertiefung Energie- und Elektrotechnik)
+### Institut für Berufliche Bildung und Arbeitslehre - Wintersemester 2020/21
 
 * Der Kurs findet in diesem Semester ausschließlich **online** statt!
 * Der Termin für den Kurs-Start wird noch bekannt gegeben.
@@ -9,8 +9,8 @@
 eigens eingerichtete Moodle-Lern-Plattform.
 * Fragen werden per Forum, Chat und Online-Video-Sprechstunden beantwortet.
 * Die Termine für die Online-Sprechstunden werden mit Ihnen abgestimmt.
-* Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.12) auf Ihrem Computer.
-* Für die Arduino-Starterkits wird ein Pfand in Höhe von 30,- € erhoben, das Sie bei Rückgabe des vollständigen und unbeschädigten Kits zurück erhalten.
+* Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.13) auf Ihrem Computer.
+* Für die Arduino-Starterkits wird ein Pfand in Höhe von 40,- € erhoben, das Sie bei Rückgabe des vollständigen und unbeschädigten Kits zurück erhalten.
 * Der Termin und der Ort für die Übergabe/ Abholung der Kits wird noch bekannt gegeben. 
 * **Bitte bringen Sie den Betrag möglichst passend mit, weil ich keine großen Summen Wechselgeld bereithalten kann!**
 
