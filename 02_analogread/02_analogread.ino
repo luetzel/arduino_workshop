@@ -1,6 +1,7 @@
 const int analogPin = A0;
 
 void setup() {
+  pinMode(A0, INPUT);
   Serial.begin(9600);
 }
 
