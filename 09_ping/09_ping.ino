@@ -1,6 +1,6 @@
 
-#define pingPin 7
-#define trigPin 8
+#define echoPin 8
+#define trigPin 7
 
 void setup() {
   Serial.begin(9600);
@@ -10,14 +10,14 @@ void loop() {
   long duration, inches, cm;
 
   pinMode(trigPin, OUTPUT);
-  pinMode(pingPin, INPUT);
+  pinMode(echoPin, INPUT);
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(5);
   digitalWrite(trigPin, LOW);
 
-  duration = pulseIn(pingPin, HIGH);
+  duration = pulseIn(echoPin, HIGH);
 
   inches = microsecondsToInches(duration);
   cm = microsecondsToCentimeters(duration);

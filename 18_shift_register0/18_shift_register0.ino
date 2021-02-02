@@ -13,17 +13,17 @@ QH  (Pin7) => h
 GND (Pin8) => GND
 Q7  (Pin9) => ---
 MR  (Pin10) => VCC
-SH  (Pin11) => D8
-ST  (Pin12) => D9
+SH  (Pin11) => D2
+ST  (Pin12) => D3
 OE  (Pin13) => GND
-DS  (Pin14) => D10
+DS  (Pin14) => D4
 QA  (Pin15) => a
 VCC (Pin16) => VCC
 */
 
-#define taktPin 8 	// SH_CP
-#define speicherPin 9 	// ST_CP
-#define datenPin 10 	// DS
+#define taktPin 2 	// SH_CP
+#define speicherPin 3 	// ST_CP
+#define datenPin 4 	// DS
 
 /*
 Zur Darstellung der Zahlen von 0 bis 9 wird ein Array deklariert. Die Bitmuster wurden in
@@ -56,10 +56,9 @@ void loop(){
   for (int i = 0; i < 10; i++){
     digitalWrite(speicherPin, LOW);
     // Abhängig davon welches Display verwendet wird (gemeinsame Anode oder Kathode), müssen die Bits der Array-Elemente invertiert werden.
-    shiftOut(datenPin,taktPin,LSBFIRST,~werte[i]); // Last Significant Bit First; Letzte Stelle zuerst übertragen; NOT Operator zur Inversion der Bits (gem. Anode) 
-    //shiftOut(datenPin,taktPin,LSBFIRST,werte[i]); // Last Significant Bit First; Letzte Stelle zuerst übertragen; NOT Operator zur Inversion der Bits (gem. Kathode) 
+    //shiftOut(datenPin,taktPin,LSBFIRST,~werte[i]); // Last Significant Bit First; Letzte Stelle zuerst übertragen; NOT Operator zur Inversion der Bits (gem. Anode) 
+    shiftOut(datenPin,taktPin,LSBFIRST,werte[i]); // Last Significant Bit First; Letzte Stelle zuerst übertragen; NOT Operator zur Inversion der Bits (gem. Kathode) 
     digitalWrite(speicherPin, HIGH);
     delay(1000);
   }
 }
-

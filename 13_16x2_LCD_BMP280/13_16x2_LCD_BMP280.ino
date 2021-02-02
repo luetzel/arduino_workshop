@@ -2,10 +2,8 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BMP280.h>
 
-// die I2C Adresse 0x76 kann nur in der Adafruit_BMP280.h
-// eingestellt werden!
 Adafruit_BMP280 BMP280; // erzeuge Sensor Instanz - die I2C Adresse muss in Adafruit_BMP280.h eingestellt werden!
-LiquidCrystal_PCF8574 LCD(0x3f);  // erzeuge  LCD Instanz
+LiquidCrystal_PCF8574 LCD(0x27);  // erzeuge  LCD Instanz
 
 void setup()
 {

@@ -16,6 +16,11 @@
 	V1.0.12 -- Allow sea level pressure calibration using setSeaLevelPressure() function
 	V1.0.14 -- Fix uninitialised structures, thanks to David Jade investigating and 
 						 flagging up this issue
+	V1.0.16 -- Modification to allow user-defined pins for I2C operation on the ESP32
+	V1.0.17 -- Added getCurrentTemperature(), getCurrentPressure(), getCurrentTempPres() 
+						 getCurrentAltitude() and getCurrentMeasurements() functions,
+						 to allow the BMP280 to be read directly without checking the measuring bit
+	V1.0.18 -- Initialise "device" constructor member variables in the same order they are declared
 	
 	The MIT License (MIT)
 	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -124,6 +129,7 @@ class BMP280_DEV : public Device {															// Derive the BMP280_DEV class 
 #endif
 		BMP280_DEV(uint8_t cs);																			// BMP280_DEV object for SPI operation
 #ifdef ARDUINO_ARCH_ESP32
+		BMP280_DEV(uint8_t sda, uint8_t scl);												// BMP280_DEV object for ESP32 I2C operation with user-defined pins
 		BMP280_DEV(uint8_t cs, uint8_t spiPort, SPIClass& spiClass);	// BMP280_DEV object for SPI1 with supplied SPIClass object
 #endif
 		uint8_t begin(Mode mode = SLEEP_MODE, 												// Initialise the barometer with arguments
@@ -142,10 +148,15 @@ class BMP280_DEV : public Device {															// Derive the BMP280_DEV class 
 		void setIIRFilter(IIRFilter iirFilter);											// Set the IIR filter setting: OFF, 2, 4, 8, 16
 		void setTimeStandby(TimeStandby timeStandby);	 							// Set the time standby measurement interval: 0.5, 62, 125, 250, 500ms, 1s, 2s, 4s
 		void setSeaLevelPressure(float pressure = 1013.23f);				// Set the sea level pressure value
+		void getCurrentTemperature(float &temperature);							// Get the current temperature measurement without checking the measuring bit
 		uint8_t getTemperature(float &temperature);									// Get a temperature measurement
+		void getCurrentPressure(float &pressure);										// Get the current pressure without checking the measuring bit
 		uint8_t getPressure(float &pressure);												// Get a pressure measurement
+		void getCurrentTempPres(float &temperature, float &pressure); // Get the current temperature and pressure without checking the measuring bit
 		uint8_t getTempPres(float &temperature, float &pressure);		// Get a temperature and pressure measurement
+		void getCurrentAltitude(float &altitude);										// Get the current altitude without checking the measuring bit
 		uint8_t getAltitude(float &altitude);												// Get an altitude measurement
+		void getCurrentMeasurements(float &temperature, float &pressure, float &altitude); // Get all measurements without checking the measuring bit
 		uint8_t getMeasurements(float &temperature, float &pressure, float &altitude);	// Get temperature, pressure and altitude measurements
 	protected:
 	private:

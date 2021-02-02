@@ -16,6 +16,11 @@
 	V1.0.12 -- Allow sea level pressure calibration using setSeaLevelPressure() function
 	V1.0.14 -- Fix uninitialised structures, thanks to David Jade investigating and 
 						 flagging up this issue
+	V1.0.16 -- Modification to allow user-defined pins for I2C operation on the ESP32
+	V1.0.17 -- Added getCurrentTemperature(), getCurrentPressure(), getCurrentTempPres() 
+						 getCurrentAltitude() and getCurrentMeasurements() functions,
+						 to allow the BMP280 to be read directly without checking the measuring bit
+	V1.0.18 -- Initialise "device" constructor member variables in the same order they are declared
 	
 	The MIT License (MIT)
 	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,8 +51,9 @@ BMP280_DEV::BMP280_DEV() { setI2CAddress(BMP280_I2C_ADDR); }		// Constructor for
 BMP280_DEV::BMP280_DEV(uint8_t sda, uint8_t scl) : Device(sda, scl) { setI2CAddress(BMP280_I2C_ADDR); } 	// Constructor for I2C comms on ESP8266
 #endif
 BMP280_DEV::BMP280_DEV(uint8_t cs) : Device(cs) {}			   			// Constructor for SPI communications
-#ifdef ARDUINO_ARCH_ESP32 																			// Constructors for SPI communications on the ESP32
-BMP280_DEV::BMP280_DEV(uint8_t cs, uint8_t spiPort, SPIClass& spiClass) : Device(cs, spiPort, spiClass) {}
+#ifdef ARDUINO_ARCH_ESP32 																			
+BMP280_DEV::BMP280_DEV(uint8_t sda, uint8_t scl) : Device(sda, scl) { setI2CAddress(BMP280_I2C_ADDR); } 	// Constructor for I2C comms on ESP32
+BMP280_DEV::BMP280_DEV(uint8_t cs, uint8_t spiPort, SPIClass& spiClass) : Device(cs, spiPort, spiClass) {} // Constructor for SPI communications on the ESP32
 #endif
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -132,18 +138,29 @@ void BMP280_DEV::setSeaLevelPressure(float pressure)								// Set the sea level
 	sea_level_pressure = pressure;
 }
 
-uint8_t BMP280_DEV::getTemperature(float &temperature)							// Get the temperature
+void BMP280_DEV::getCurrentTemperature(float &temperature)					// Get the current temperature without checking the measuring bit
+{
+	uint8_t data[3];                                                  // Create a data buffer
+	readBytes(BMP280_TEMP_MSB, &data[0], 3);             							// Read the temperature and pressure data
+	int32_t adcTemp = (int32_t)data[0] << 12 | (int32_t)data[1] << 4 | (int32_t)data[2] >> 4;  // Copy the temperature and pressure data into the adc variables
+	int32_t temp = bmp280_compensate_T_int32(adcTemp);                // Temperature compensation (function from BMP280 datasheet)
+	temperature = (float)temp / 100.0f;                               // Calculate the temperature in degrees Celsius
+}
+
+uint8_t BMP280_DEV::getTemperature(float &temperature)							// Get the temperature with measurement check
 {
 	if (!dataReady())																									// Check if a measurement is ready
 	{
 		return 0;
 	}
-	uint8_t data[3];                                                  // Create a data buffer
-	readBytes(BMP280_TEMP_MSB, &data[0], 3);             							// Read the temperature and pressure data
-	int32_t adcTemp = (int32_t)data[0] << 12 | (int32_t)data[1] << 4 | (int32_t)data[2] >> 4;  // Copy the temperature and pressure data into the adc variables
-	int32_t temp = bmp280_compensate_T_int32(adcTemp);                // Temperature compensation (function from BMP280 datasheet)
-	temperature = (float)temp / 100.0f;                               // Calculate the temperature in degrees celcius
+	getCurrentTemperature(temperature);																// Get the current temperature
 	return 1;
+}
+
+void BMP280_DEV::getCurrentPressure(float &pressure)								// Get the current pressure without checking the measuring bit
+{
+	float temperature;
+	getCurrentTempPres(temperature, pressure);
 }
 
 uint8_t BMP280_DEV::getPressure(float &pressure)										// Get the pressure
@@ -152,27 +169,44 @@ uint8_t BMP280_DEV::getPressure(float &pressure)										// Get the pressure
 	return getTempPres(temperature, pressure);
 }
 
-uint8_t BMP280_DEV::getTempPres(float &temperature, float &pressure)	// Get the temperature and pressure
+void BMP280_DEV::getCurrentTempPres(float &temperature, float &pressure)	// Get the current temperature and pressure without checking the measuring bit
 {
-	if (!dataReady())																									// Check if a measurement is ready
-	{
-		return 0;
-	}
 	uint8_t data[6];                                                  // Create a data buffer
 	readBytes(BMP280_PRES_MSB, &data[0], 6);             							// Read the temperature and pressure data
 	int32_t adcTemp = (int32_t)data[3] << 12 | (int32_t)data[4] << 4 | (int32_t)data[5] >> 4;  // Copy the temperature and pressure data into the adc variables
 	int32_t adcPres = (int32_t)data[0] << 12 | (int32_t)data[1] << 4 | (int32_t)data[2] >> 4;
 	int32_t temp = bmp280_compensate_T_int32(adcTemp);                // Temperature compensation (function from BMP280 datasheet)
 	uint32_t pres = bmp280_compensate_P_int64(adcPres);               // Pressure compensation (function from BMP280 datasheet)
-	temperature = (float)temp / 100.0f;                               // Calculate the temperature in degrees celcius
+	temperature = (float)temp / 100.0f;                               // Calculate the temperature in degrees Celsius
 	pressure = (float)pres / 256.0f / 100.0f;                         // Calculate the pressure in millibar
+}
+
+uint8_t BMP280_DEV::getTempPres(float &temperature, float &pressure)	// Get the temperature and pressure
+{
+	if (!dataReady())																									// Check if a measurement is ready
+	{
+		return 0;
+	}
+	getCurrentTempPres(temperature, pressure);												// Get the current temperature and pressure
 	return 1;
+}
+
+void BMP280_DEV::getCurrentAltitude(float &altitude)								// Get the current altitude without checking the measuring bit
+{
+	float temperature, pressure;
+	getCurrentMeasurements(temperature, pressure, altitude);
 }
 
 uint8_t BMP280_DEV::getAltitude(float &altitude)										// Get the altitude
 {
 	float temperature, pressure;
 	return getMeasurements(temperature, pressure, altitude);
+}
+
+void BMP280_DEV::getCurrentMeasurements(float &temperature, float &pressure, float &altitude) // Get all the measurements without checking the measuring bit
+{
+	getCurrentTempPres(temperature, pressure);
+	altitude = ((float)powf(sea_level_pressure / pressure, 0.190223f) - 1.0f) * (temperature + 273.15f) / 0.0065f; // Calculate the altitude in metres 
 }
 
 uint8_t BMP280_DEV::getMeasurements(float &temperature, float &pressure, float &altitude)		// Get all measurements temperature, pressue and altitude

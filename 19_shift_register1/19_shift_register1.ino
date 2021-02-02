@@ -1,13 +1,13 @@
-#define taktPin 8 // SH_CP
-#define speicherPin 9 // ST_CP
-#define datenPin 10 // DS
+#define taktPin 2 // SH_CP
+#define speicherPin 3 // ST_CP
+#define datenPin 4 // DS
 
 /* Shift Register
 OE (Pin13) => GND
 MR (Pin10) => VCC
 */
 
-int datenArray[] = {1,1,1,1,1,1,1,1}; // gemeinsame Cathode
+int datenArray[] = {1,1,1,1,1,1,1,1}; // gemeinsame Kathode
 //int datenArray[] = {0,0,0,0,0,0,0,0}; // gemeinsame Anode
 
 void setup() {

@@ -1,6 +1,6 @@
-#define ledPin 13
-#define potPin A0
-#define ldrPin A1
+const unsigned int ledPin = 13;
+const unsigned int potPin = A0;
+const unsigned int ldrPin = A1;
 
 void setup() {
   pinMode(ledPin, OUTPUT);

@@ -7,7 +7,7 @@ An Arduino compatible, non-blocking, I2C/SPI library for the Bosch BMP280 barome
 
 This BMP280_DEV library offers the following features:
 
-- Returns temperature in degrees celius (**°C**), pressure in hectoPascals/millibar (**hPa**) and altitude in metres (**m**)
+- Returns temperature in degrees celsius (**°C**), pressure in hectoPascals/millibar (**hPa**) and altitude in metres (**m**)
 - NORMAL or FORCED modes of operation
 - I2C or hardware SPI communications with configurable clock rates
 - Non-blocking operation 
@@ -21,7 +21,7 @@ This BMP280_DEV library offers the following features:
 2. [Arduino Compatiblility](#arduino_compatibility)
 3. [Installation](#installation)
 3. [Usage](#usage)
-	1. [BMP388_DEV Library](#bmp388_dev_library)
+	1. [BMP280_DEV Library](#bmp280_dev_library)
 	2. [Device Initialisation](#device_intialisation)
 	3. [Device Configuration](#device_configuration)
 	4. [Modes Of Operation](#modes_of_operation)
@@ -32,6 +32,11 @@ This BMP280_DEV library offers the following features:
 <a name="version"></a>
 ## __Version__
 
+- Version 1.0.18 -- Initialise "device" constructor member variables in the same order they are declared
+- Version 1.0.17 -- Added getCurrentTemperature(), getCurrentPressure(), getCurrentTempPres() 
+						 				getCurrentAltitude() and getCurrentMeasurements() functions,
+						 				to allow the BMP280 to be read directly without checking the status register
+- Version 1.0.16 -- Modification to allow user-defined pins for I2C operation on the ESP32
 - Version 1.0.14 -- Fix uninitialised structures, thanks to David Jade investigating and flagging up this issue
 - Version 1.0.12 -- Allow sea level pressure calibration using setSeaLevelPressure() function
 - Version 1.0.10 -- Modification to allow user-defined pins for I2C operation on the ESP8266
@@ -69,13 +74,21 @@ Simply include the BMP280_DEV.h file at the beginning of your sketch:
 #include <BMP280_DEV.h>
 ```
 
-For I2C communication the BMP280_DEV object is created (instantiated) without parameters:
+For I2C communication the BMP280_DEV object is normally created (instantiated) without parameters:
 
 ```
 BMP280_DEV bmp280;	// Set up I2C communications
 ```
 
 By default the library uses the BMP280's I2C address 0x77. (To use the alternate I2C address: 0x76, see the begin() function below.
+
+The ESP8266 and ESP32 also offer the option of selecting the I2C SDA and SDA pins as parameters:
+
+```
+BMP280_DEV bmp280(A6, A7);	// Set up I2C communications on ESP32 pins A6 (SDA) and A7 (SCL): bmp280(SDA, SCL);
+```
+
+If no parameters are selected, the ESP32 uses its default SDA and SCL pins.
 
 For SPI communication the chip select (CS) Arduino digital output pin is specified as an argument, for example digital pin 10:
 
@@ -93,7 +106,7 @@ BMP280_DEV bmp(21, HSPI, SPI1);		// Set up HSPI port communications on the ESP32
 By default the I2C runs in fast mode at 400kHz and SPI at 1MHz. However it is possible to change either the I2C or SPI clock speed using the set clock function:
 
 ```
-bmp388.setClock(4000000);			// Set the SPI clock to 4MHz
+bmp280.setClock(4000000);			// Set the SPI clock to 4MHz
 ```
 
 ---
@@ -185,7 +198,7 @@ bmp280.stopConversion();	// Stop conversion and return to SLEEP_MODE
 <a name="results_acquisition"></a>
 ### __Results Acquisition__
 
-The BMP280 barometer library acquires temperature in degrees celius (**°C**), pressure in hectoPascals/millibar (**hPa**) and altitude in metres (**m**). The acquisition functions scan the BMP280's status register and return 1 if the barometer results are ready and have been successfully read, 0 if they are not; this allows for non-blocking code implementation. The temperature, pressure and altitude results themselves are _float_ variables by passed reference to the function and are updated upon a successful read.
+The BMP280 barometer library acquires temperature in degrees celsius (**°C**), pressure in hectoPascals/millibar (**hPa**) and altitude in metres (**m**). The acquisition functions scan the BMP280's status register and return 1 if the barometer results are ready and have been successfully read, 0 if they are not; this allows for non-blocking code implementation. The temperature, pressure and altitude results themselves are _float_ variables by passed reference to the function and are updated upon a successful read. 
 
 Here are the results acquisition functions:
 
@@ -207,6 +220,28 @@ bmp280.getPressure(pressure);	// Acquire the pressure only, (also calculates tem
 
 ```
 bmp280.getAltitude(altitude);	// Acquire the altitude only
+```
+
+However, these function only operate correctly and efficiently if your Arduino sketch's loop() time is fast enough (<35ms). If your loop() time is slow then these functions are unable to poll the BMP280's status register quickly enough. In this case, it is possible to simply read the barometer's latest results without checking the status register with the following functions:
+
+```
+bmp280.getCurrentMeasurements(temperature, pressure, altitude);	// Acquire the current temperature, pressue and altitude measurements
+```
+
+```
+bmp280.getCurrentTempPres(temperature, pressure);	// Acquire both the current temperature and pressure
+```
+
+```
+bmp280.getCurrentTemperature(temperature);	// Acquire the current temperature only
+```
+
+```
+bmp280.getCurrentPressure(pressure);	// Acquire the currentpressure only, (also calculates temperature, but doesn't return it)
+```
+
+```
+bmp280.getCurrentAltitude(altitude);	// Acquire the current altitude only
 ```
 ---
 <a name="code_implementation"></a>
@@ -304,3 +339,5 @@ For more details see code examples provided in the _.../examples/..._ directory.
 - __BMP280_SPI_Normal_Multiple.ino__ : SPI Interface, Normal Mode, Multiple BMP280 Devices
 
 - __BMP280_ESP8266_I2C_Normal_DefinedPins.ino__ : ESP8266 I2C Interface, Normal Mode, User-Defined Pins
+
+- __BMP280_ESP32_I2C_Normal_DefinedPins.ino__ : ESP32 I2C Interface, Normal Mode, User-Defined Pins

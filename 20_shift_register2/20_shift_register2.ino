@@ -1,14 +1,14 @@
-#define taktPin 8
-#define speicherPin 9
-#define datenPin 10
+#define taktPin 2
+#define speicherPin 3
+#define datenPin 4
 
 /* Shift Register
 OE (Pin13) => GND
 MR (Pin10) => VCC
 */
 
-byte wert = 0; // Gemeisame Anode
-//byte wert = 255; // Gemeinsame Cathode
+//byte wert = 0; // Gemeisame Anode
+byte wert = 255; // Gemeinsame Kathode
 
 void setup() {
   pinMode(taktPin, OUTPUT);

@@ -22,9 +22,15 @@ setTempOversampling	KEYWORD2
 setIIRFilter	KEYWORD2
 setTimeStandby	KEYWORD2
 setSeaLevelPressure	KEYWORD2
+getCurrentTemperature	KEYWORD2
+getTemperature	KEYWORD2
+getCurrentPressure	KEYWORD2
 getPressure	KEYWORD2
+getCurrentTempPres	KEYWORD2
 getTempPres	KEYWORD2
+getCurrentAltitude	KEYWORD2
 getAltitude	KEYWORD2
+getCurrentMeasurements	KEYWORD2
 getMeasurements	KEYWORD2
 setClock	KEYWORD2
 
