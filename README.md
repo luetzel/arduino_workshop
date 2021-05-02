@@ -26,8 +26,7 @@ Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für 
 Wenn Sie die Arduino-Entwicklungsumgebung unter Windows oder MacOSX verwenden wollen, müssen Sie zusätzlich einen Treiber für den CH340-USB-Controller-Chip installieren,
  damit Sie die im Kurs verwendeten Arduino Nano Platinen mit Ihrem Notebook/ Desktop-PC über den USB-Anschluss programmieren können.
 
-* [Link zum Download der Treiber](https://wiki.wemos.cc/downloads)
-* [Offizieller Treiber des Herstellers](http://www.wch.cn/download/CH341SER_EXE.html)
+* [Offizieller Treiber des Herstellers](http://www.wch-ic.com/downloads/CH341SER_ZIP.html)
 
 Auf Win10 Geräten müssen Sie möglicherweise die Sicherheitseinstellungen so verändern, dass Sie auch unsignierte Treiber auf Ihrem Gerät installieren können. Manchmal ist es unter WIn10 erforderlich den Arduino **zuerst** an den PC anzuschließen **und dann** mit der Installation des Treibers zu beginnen.
 
