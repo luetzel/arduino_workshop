@@ -4,7 +4,7 @@
 // +5V ------ +LED ------- 330Rresistor ------ P8574pin
 // sink current
 
-PCF8574 expander(0x20);
+PCF8574 expander(0x3b);
 
 void setup()
 {
@@ -15,21 +15,21 @@ void setup()
 void loop()
 {
   // auf einen Pin schreiben
-  expander.write(0,LOW);
+  //expander.write(0,LOW);
 
   //
-  for (int i=0; i<7; i++)
-    {
-        expander.rotateLeft();
-        Serial.println(expander.read8(), BIN);
-        delay(100);
-    }
-  for (int i=0; i<7; i++)
-    {
-        expander.rotateRight();
-        Serial.println(expander.read8(), BIN);
-        delay(100);
-    }
+  //for (int i=0; i<7; i++)
+  //  {
+  //      expander.rotateLeft();
+  //      Serial.println(expander.read8(), BIN);
+  //      delay(100);
+  //  }
+  //for (int i=0; i<7; i++)
+  //  {
+  //      expander.rotateRight();
+  //      Serial.println(expander.read8(), BIN);
+  //      delay(100);
+  //  }
   //
 
   /*
@@ -44,20 +44,20 @@ void loop()
   expander.write8(0B11111111); // 0xFF
   */
 
-  /*
-  byte bytearray[] = {0x00, 0x80, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC, 0xFE, 0xFF};
+  
+  //byte bytearray[] = {0x00, 0x80, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC, 0xFE, 0xFF};
 
-  for (int i=0; i < 8; i++)
-  {
-    expander.write8(bytearray[i]);
-    delay(300);
-  }
-  */
+  //for (int i=0; i < 8; i++)
+  //{
+  //  expander.write8(bytearray[i]);
+  //  delay(300);
+  //}
+  
 
   // auf alle Pins schreiben
-  /*for (int i=0; i<255; i++)
+  for (int i=0; i<255; i++)
   {
     expander.write8(~i);
     delay(100);  
-  }*/
+  }
 }

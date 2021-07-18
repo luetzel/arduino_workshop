@@ -57,7 +57,7 @@ public:
   void noAutoscroll();
   void leftToRight();
   void rightToLeft();
-  void createChar(int, int[]);
+  void createChar(int, byte[]);
 
   // plus functions from LCDAPI:
   void clear(); // same as init()
@@ -71,10 +71,12 @@ private:
   // instance variables
   int _i2cAddr; ///< Wire Address of the LCD
   int _backlight; ///< the backlight intensity
+  int _cols; ///< number of cols of the display
   int _lines; ///< number of lines of the display
   int _entrymode; ///<flags from entrymode
   int _displaycontrol; ///<flags from displaycontrol
-
+  int _row_offsets[4];
+  
   // low level functions
   void _send(int value, bool isData = false);
   void _sendNibble(int halfByte, bool isData = false);

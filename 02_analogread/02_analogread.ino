@@ -1,13 +1,25 @@
-#define analogPin A0
+#define potPin A1
+#define ldrPin A0
+#define ledPin 13
 
 void setup() {
   Serial.begin(9600);
-  pinMode(A0, INPUT);
+  pinMode(potPin, INPUT);
+  pinMode(ldrPin, INPUT);
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  int sensorValue = analogRead(analogPin);
-  Serial.println(sensorValue);
-  Serial.println(float(sensorValue) / 1023 * 5);
-  delay(250);
+  int potValue = analogRead(potPin);
+  int ldrValue = analogRead(ldrPin);
+  if(ldrValue < potPin) {
+    digitalWrite(ledPin,HIGH);
+  }
+  else {
+    digitalWrite(ledPin,LOW);
+  }
+  Serial.print(potValue);
+  Serial.print(" ");
+  Serial.println(ldrValue);
+  delay(1);
 }

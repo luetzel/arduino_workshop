@@ -33,10 +33,15 @@ LiquidCrystal_PCF8574::LiquidCrystal_PCF8574(int i2cAddr)
 
 void LiquidCrystal_PCF8574::begin(int cols, int lines)
 {
-  // _cols = cols ignored !
-  _lines = lines;
+  _cols = min(cols, 80);
+  _lines = min(lines, 4);
 
   int functionFlags = 0;
+
+  _row_offsets[0] = 0x00;
+  _row_offsets[1] = 0x40;
+  _row_offsets[2] = 0x00 + cols;
+  _row_offsets[3] = 0x40 + cols;
 
   if (lines > 1) {
     functionFlags |= 0x08;
@@ -58,7 +63,7 @@ void LiquidCrystal_PCF8574::begin(int cols, int lines)
   delayMicroseconds(200);
   _sendNibble(0x03);
   delayMicroseconds(200);
-  _sendNibble(0x02);   // finally, set to 4-bit interface
+  _sendNibble(0x02); // finally, set to 4-bit interface
 
   // Instruction: Function set = 0x20
   _send(0x20 | functionFlags);
@@ -94,9 +99,11 @@ void LiquidCrystal_PCF8574::home()
 /// Set the cursor to a new position.
 void LiquidCrystal_PCF8574::setCursor(int col, int row)
 {
-  int row_offsets[] = {0x00, 0x40, 0x14, 0x54};
-  // Instruction: Set DDRAM address = 0x80
-  _send(0x80 | (row_offsets[row] + col));
+  // check boundaries
+  if ((col >= 0) && (col < _cols) && (row >= 0) && (row < _lines)) {
+    // Instruction: Set DDRAM address = 0x80
+    _send(0x80 | (_row_offsets[row] + col));
+  }
 } // setCursor()
 
 
@@ -219,7 +226,7 @@ void LiquidCrystal_PCF8574::setBacklight(int brightness)
 
 // Allows us to fill the first 8 CGRAM locations
 // with custom characters
-void LiquidCrystal_PCF8574::createChar(int location, int charmap[])
+void LiquidCrystal_PCF8574::createChar(int location, byte charmap[])
 {
   location &= 0x7; // we only have 8 locations 0-7
   // Set CGRAM address

@@ -1,17 +1,11 @@
 ## Arduino Grundkurs - TU-Berlin (L544, Digitale Techniken und Informationstechnologischer Wandel)
 ### Institut für Berufliche Bildung und Arbeitslehre (IBBA) - Sommersemester 2021
 
-* Der Kurs findet in diesem Semester ausschließlich **online** statt!
-* Der Termin für den Kurs-Start ist der 03.05.2021
-* Den Einschreibeschlüssel/ Zugangsdaten und Link für die Teilnahme am Online-Kurs erhalten Sie per E-Mail.
+* Der geblockte Kurs II findet vom 21.07. bis zum 30.07.21  in **Präsenz** in der Elektrowerkstatt statt,
+  täglich von 10:00 s.t. bis 14:15 Uhr.
 * **WICHTIG:** Für die Teilnahme am Kurs benötigen Sie ein eigenes Notebook, einen Laptop oder Desktop-PC.
-* Die Betreuung des Kurses erfolgt nach dem Flipped-Classroom-Prinzip, d.h. Sie lernen selbständig und nutzen dafür eine 
-eigens eingerichtete Moodle-Lern-Plattform.
-* Fragen werden per Forum, Chat und Online-Video-Sprechstunden beantwortet.
-* Die Termine für die Online-Sprechstunden werden mit Ihnen abgestimmt.
-* Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.13) auf Ihrem Computer.
-* Für die Arduino-Starterkits wird ein Pfand in Höhe von 40,- € erhoben, das Sie bei Rückgabe des vollständigen und unbeschädigten Kits zurück erhalten.
-* Die Abholung der Kits ist bereits abgeschlosen. 
+* Installieren Sie bitte vorab die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.13) auf Ihrem Computer.
+* Für die Arduino-Starterkits wird ein Pfand in Höhe von 40,- € erhoben, das Sie bei Rückgabe des vollständigen und unbeschädigten Kits zurück erhalten. 
 * **Bitte bringen Sie  die Kaution möglichst passend mit, weil ich keine großen Summen Wechselgeld bereithalten kann!**
 
 ### Installation der Arduino-Entwicklungsumgebung

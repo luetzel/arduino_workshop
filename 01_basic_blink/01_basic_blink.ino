@@ -1,23 +1,18 @@
-/* #define is an instruction for the C preprocessor and works like an
-   alias. In the example below, LED_PIN is replaced by 13 before
-   the code is compiled
-   int LED_PIN = 13;
-   Declaring integer variables as constants is not recommend and always
-   should be avoided, since it takes too much flash memory!
-*/
-#define LED_PIN 13
-#define BLINK_TIME 1000
+//int LED_PIN = 10;
+//int BLINK_TIME = 200;
 
-// the setup function runs once when you press reset or power the board
+#define LED_PIN 13
+
 void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
+  Serial.begin(9600);
   pinMode(LED_PIN, OUTPUT);
 }
 
-// the loop function runs over and over again forever
 void loop() {
+  int sensorValue = analogRead(A0);
+  if (sensorValue > 800) {
   digitalWrite(LED_PIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(BLINK_TIME);             // wait for a second
+  }
+ 
   digitalWrite(LED_PIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(BLINK_TIME);             // wait for a second
 }
