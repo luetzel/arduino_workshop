@@ -1,21 +1,8 @@
-## Arduino Grundkurs - TU-Berlin (L543, Vertiefung Energie- und Elektrotechnik)
-### Institut für Berufliche Bildung und Arbeitslehre - Wintersemester 2020/21
+## Anwendung und Funktion digitaler Technologien - TU-Berlin (L130/131)
+### Institut für Berufliche Bildung und Arbeitslehre - Wintersemester 2024/25
 
-* Der Kurs findet in diesem Semester ausschließlich **online** statt!
-* Der Termin für den Kurs-Start wird noch bekannt gegeben.
-* Den Einschreibeschlüssel/ Zugangsdaten und Link für die Teilnahme am Online-Kurs erhalten Sie per E-Mail.
-* **WICHTIG:** Für die Teilnahme am Kurs benötigen Sie ein eigenes Notebook, einen Laptop oder Desktop-PC.
-* Die Betreuung des Kurses erfolgt nach dem Flipped-Classroom-Prinzip. D.h. Sie lernen selbständig und nutzen dafür eine  
-eigens eingerichtete Moodle-Lern-Plattform.
-* Fragen werden per Forum, Chat und Online-Video-Sprechstunden beantwortet.
-* Die Termine für die Online-Sprechstunden werden mit Ihnen abgestimmt.
-* Installieren Sie bitte die aktuelle Version der [Arduino-Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software) (Version 1.8.13) auf Ihrem Computer.
-* Für die Arduino-Starterkits wird ein Pfand in Höhe von 40,- € erhoben, das Sie bei Rückgabe des vollständigen und unbeschädigten Kits zurück erhalten.
-* Der Termin und der Ort für die Übergabe/ Abholung der Kits wird noch bekannt gegeben. 
-* **Bitte bringen Sie den Betrag möglichst passend mit, weil ich keine großen Summen Wechselgeld bereithalten kann!**
-
-### Installation der Arduino-Entwicklungsumgebung
-Bitte laden Sie sich die aktuelle Version der Arduino-Entwicklungsumgebung für Ihr Betriebssystem herunter.
+### Vorbereitungen: Installation der Arduino-Entwicklungsumgebung
+Bitte laden Sie die aktuelle Version der Arduino-Entwicklungsumgebung für Ihr Betriebssystem herunter und installieren Sie diese auf Ihrem Endgerät.
 
 * [Link zum Download der Entwicklungsumgebung](https://www.arduino.cc/en/Main/Software)
 
@@ -40,11 +27,17 @@ Auf Windows-Geräten ist es manchmal schwierig den richtigen COM-Port zu finden,
 
 * [Wie finde ich den richtigen COM-Port? (Video)](https://www.youtube.com/watch?v=hou4okcCX7E)
 
+#### Ausführliche Anleitung zur Installation des Treibers
+
+Falls Sie probleme haben den CH340 Treiber zu installieren oder der an Ihrem Endgerät angeschlossene Arduino nicht erkannt wird, finden Sie auf der
+folgenden Seite eine ausführliche Anleitung.
+
+* [Sparkfun: How to Install CH340 Drivers ](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
+
 #### Hinweise für Linux-Nutzer
 Falls Sie ein Notebook mit einer aktuellen Linux-Distribution (Ubuntu, Debian, SuSE o. ä.) verwenden müssen Sie in der Regel keinen Treiber installieren, denn der Linux-Kernel unterstützt den CH340-Chip bereits out-of-the-box.
 
-Beim Linux-Kernel ab der Version 5.5.x wurden Veränderungen am CH340-Modul vorgenommen, die dazu führen können, dass sich keine Firmware in den Flash-Speicher des Arduino übertragen lässt. Falls Sie noch einen Kernel 
-einsetzen, der älter als Patch-Level 5.5.8 ist, müssen Sie ein Kernel-Update durchführen, um das Problem zu beheben. Die Kernel-Serie 5.4.x und 5.6.x ist nicht betroffen.
+Beim Linux-Kernel ab der Version 5.5.x wurden Veränderungen am CH340-Modul vorgenommen, die dazu führen können, dass sich keine Firmware in den Flash-Speicher des Arduino übertragen lässt. Falls Sie noch einen Kernel einsetzen, der älter als Patch-Level 5.5.8 ist, müssen Sie ein Kernel-Update durchführen, um das Problem zu beheben. Die Kernel-Serie 5.4.x und 5.6.x ist nicht betroffen.
 
 Damit Sie unter Linux auf den Seriellen Port schreiben können, müssen Sie ihren Benutzernamen der Gruppe `dialout` hinzufügen. Das geht durch Eingabe des Befels:
 
@@ -53,8 +46,8 @@ Damit Sie unter Linux auf den Seriellen Port schreiben können, müssen Sie ihre
 auf der Konsole. Damit erlangen Sie Schreibrechte für /dev/ttyUSB0 Port.
 
 ### Beispiel-Codes
-Ab dem 20. April 2020 können Sie hier alle [Beispiel-Codes](https://gogs.raspberryblog.de/superuser/arduino_workshop/archive/master.zip) und weiteres Arbeitsmaterial für die praktischen Übungen herunterladen.
-Das Verzeichnis wird im Verlauf des Kurses gelegentlich aktualisert.
+
+Dieses Github-Repo wird im Verlauf des Kurses gelegentlich aktualisert.
 
 Wenn Sie das Tool ['git'](https://git-scm.com/download) auf Ihrem System installiert haben, können Sie den Beispiel-Code auch durch Eingabe des Befehls:
 
@@ -112,28 +105,9 @@ Das Elektronik-Kompendium ist ein sehr gutes Nachschlagwerk, um die im Kurs beha
 * [Vorwiderstand einer LED berechnen](https://www.elektronik-kompendium.de/sites/grd/1006011.htm)
 * [Unbelasteter Spannungsteiler](https://www.elektronik-kompendium.de/sites/slt/0201111.htm)
 
-### Probleme mit den Ultraschallsensoren
-Bitte achten Sie beim Zusammenstecken der Schaltung auf die Orientierung des Sensors! VCC und GND dürfen nicht verwechselt werden!
-
-![Ultraschall-Sensor](https://github.com/luetzel/arduino_workshop/blob/master/Fritzing/13_Ultraschall.jpg)
-
-Ein Fehler in der Firmware des Sensors kann dazu führen, dass dieser "einfriert" wenn kein Echo empfangen wird. In anderen Worten, der Sensor wartet für eine unbegrenzte
- Zeit auf das eintreffende Echo. Abhilfe schafft die Programmierung eines "Timeouts", das den Sensor nach einer bestimmten Wartezeit zurücksetzt:
-
-```
-duration = pulseIn(echoPin, HIGH, 30000);
-```
-
-Auf den echoPin wird dafür ein LOW für 200 us geschrieben. Im folgenden Sketch wird außerdem die Ausgabe der Entfernung in cm auf ein Intervall zwischen 5 und 400 cm begrenzt.
-
-[Ping Sketch mit Workaround](https://github.com/luetzel/arduino_workshop/blob/master/10_ping_timeout/10_ping_timeout.ino)
-
-Nicht alle Bibliotheken unterstützen die Timeout-Funktion.
-
 ### Verwendung von Bibliotheken
 Für die meisten Bauteile gibt es Bibliotheken, die das Programmieren - gerade für Anfänger - erheblich vereinfachen. Bibliotheken lassen sich über das Menü der Arduino-IDE "Sketch > Bibiothek einbinden > Bibliothek verwalten" auffinden und installieren.
- Bevor eine Bibliothek in einem Sketch verwendet werden kann, muss eine sogenannte Header-Datei (Dateiendung *.h) importiert werden. Das erfolgt mit der #include ```<library.h>``` Anweisung. Zu jeder Library werden in der Regel
-Code-Beispiele mitgeliefert, welche die Verwendung der Bibliothek erklären. Für den Ultraschallsensor können wir z.B. die NewPing Library nutzen:
+ Bevor eine Bibliothek in einem Sketch verwendet werden kann, muss eine sogenannte Header-Datei (Dateiendung *.h) importiert werden. Das erfolgt mit der #include ```<library.h>``` Anweisung. Zu jeder Library werden in der Regel Code-Beispiele mitgeliefert, welche die Verwendung der Bibliothek erklären. Für den Ultraschallsensor können wir z.B. die NewPing Library nutzen:
 
 ```
 #include <NewPing.h>
@@ -178,16 +152,14 @@ Bei Verwendung von Bauteilen mit I2C-Bus muss die korrekte Adresse im Arduino-Sk
 70: -- -- -- -- -- -- 76 --
 ```
 
-Die 16x2 LC-Displays mit PCF8574-Adapter haben entweder die Adresse 0x3F oder 0x27. Der BMP280 Sensor (Barometer) hört auf die Adresse 0x76.
-Manchmal kann es erforderlich sein die Adresse direkt in den C-Header Dateien der Bibliotheken zu ändern. Dafür navigiert man in das Arduino-Library Verzeichnis (z.B. unter Windows: Meine Dokumente/Arduino/libraries) und öffnet die 
-betroffene Header-Datei. Beim BMP280-Sensor ist das die Datei ```Adafruit_BMP280.h```. Dort trägt man in der Zeile
+Die 16x2 LC-Displays mit PCF8574-Adapter haben entweder die Adresse 0x3F oder 0x27. Der BMP280 Sensor (Barometer) "hört" auf die Adresse 0x76.
+Manchmal kann es erforderlich sein die Adresse direkt in den C-Header Dateien der Bibliotheken zu ändern. Dafür navigiert man in das Arduino-Library Verzeichnis (z.B. unter Windows: Meine Dokumente/Arduino/libraries) und öffnet die betroffene Header-Datei. Beim BMP280-Sensor ist das die Datei ```Adafruit_BMP280.h```. Dort trägt man in der Zeile
 
 ```
  #define BMP280_ADDRESS (0x76)
 ```
 
-0x76 anstelle der voreingestellten Adresse 0x77 ein. Beim Anschließen der I2C-adressierter Bauteile ist auf die Polarität GND/ VCC sowie deren Spannungsversorgung zu achten (**3V3 für das Barometer!**). Häufig werden die Module 
-auch für andere Mikrocontroller oder Ein-Platinen-Computer (Raspberry Pi) verkauft. Ein Blick ins Datenblatt hilft, um herauszufinden, ob das Bauteil 5 Volt-tolerant ist oder einen Pegel-Wandler (Level-Shifter) benötigt.
+0x76 anstelle der voreingestellten Adresse 0x77 ein. Beim Anschließen der I2C-adressierter Bauteile ist auf die Polarität GND/ VCC sowie deren Spannungsversorgung zu achten (**3V3 für das Barometer!**). Häufig werden die Module auch für andere Mikrocontroller oder Ein-Platinen-Computer (Raspberry Pi) verkauft. Ein Blick ins Datenblatt hilft, um herauszufinden, ob das Bauteil 5 Volt-tolerant ist oder einen Pegel-Wandler (Level-Shifter) benötigt.
 
 Grundsätzlich gilt für alle Bauteile mit I2C-Bus:
 
